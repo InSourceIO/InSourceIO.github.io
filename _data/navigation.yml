@@ -1,0 +1,46 @@
+- title: "Start"
+  url: "/"
+  side: left
+
+- title: "Home"
+  url: "/home/"
+  side: left
+
+- title: "About"
+  url: "/about/"
+  side: left
+
+- title: "Team"
+  url: "/team/"
+  side: left
+
+- title: "Expertise"
+  url: "/expertise/"
+  side: left
+
+- title: Technologies
+  url: "/technologies/"
+  side: left
+
+- title: "Projects"
+  url: "/projects/"
+  side: left
+
+- title: "Partners"
+  url: "/partners/"
+  side: left
+
+- title: Blog
+  url: "/blog/"
+  side: left
+#  dropdown:
+#  - title: "Blog Archive"
+#    url: "/blog/archive/"
+
+- title: "Search"
+  url: "/search/"
+  side: right
+
+- title: "Contact"
+  url: "/contact/"
+  side: right
