@@ -2,3 +2,4 @@
 _site
 node_modules
 *.iml
+_config.yml
