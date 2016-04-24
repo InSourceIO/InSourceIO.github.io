@@ -1,5 +1,44 @@
 # ASCII-Font › http://patorjk.com/software/taag/#p=display&f=Slant&t=Phlow
 #
+#       ______                 __  ______                        _____      __  __  _
+#      / ____/________  ____  / /_/ ____/___ _   _____  _____   / ___/___  / /_/ /_(_)___  ____ ______
+#     / /_  / ___/ __ \/ __ \/ __/ /   / __ \ | / / _ \/ ___/   \__ \/ _ \/ __/ __/ / __ \/ __ `/ ___/
+#    / __/ / /  / /_/ / / / / /_/ /___/ /_/ / |/ /  __/ /      ___/ /  __/ /_/ /_/ / / / / /_/ (__  )
+#   /_/   /_/   \____/_/ /_/\__/\____/\____/|___/\___/_/      /____/\___/\__/\__/_/_/ /_/\__, /____/
+#                                                                                    /____/
+#
+# Name of your website
+name: 'InSource Software'
+
+# Delete the lines you don't need
+# about 5 elements are recomended
+github_username:  InSourceSoftware
+codepen_username: InSourceSoftware
+facebook_username: InSourceSoftware
+twitter_username: InSourceSoftware
+google_plus_username: InSourceSoftware
+linkedin_username: InSourceSoftware
+instagram_username:  InSourceSoftware
+stack_of_username: InSourceSoftware
+reddit_username: InSourceSoftware
+tumblr_username: InSourceSoftware
+blog_url: "/blog/"
+email: contact@insource.io
+
+avatar: yes
+#avatar_img_path: "imgs/avatar.jpg""
+# You can link to your GitHub image. That way it will get updated
+# automatically whenever you change your GitHub profile picture
+avatar_img_path: "https://avatars0.githubusercontent.com/u/18608462"
+
+front_img: yes
+front_img_path: "images/background.jpg"
+#front_img_path: "https://external.url/image.jpg"
+
+favicon_img: yes
+favicon_img_path: "imgs/favicon.ico"
+#favicon_img_path: "https://external.url/favicon.ico"
+
 #      _____ _ __          _____      __  __  _
 #     / ___/(_) /____     / ___/___  / /_/ /_(_)___  ____ ______
 #     \__ \/ / __/ _ \    \__ \/ _ \/ __/ __/ / __ \/ __ `/ ___/
@@ -14,7 +53,7 @@ title: 'InSource Software'
 slogan: 'InSource Software - Insert slogan here'
 
 # The description is used on homepage and in the footer to quickly describe your website. Use a maximum of 150 characters for SEO-purposes.
-description: '»InSource Software« works to get your business fast tracked to solving your most difficult problems and into a state of competitive advantage.'
+description: 'InSource Software &middot; Our engineers, your source.'
 
 # The credits show up in the includes/_footer.html – It would be nice of you to leave a link to Phlow or Feeling Responsive as a thank you :)
 credits: '<p>Created by <a href="http://phlow.de/">Phlow</a> with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> based on <a href="http://phlow.github.io/feeling-responsive/">Feeling Responsive</a>.</p>'
