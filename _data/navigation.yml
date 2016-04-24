@@ -9,25 +9,20 @@
 - title: "About"
   url: "/about/"
   side: left
+  dropdown:
+  - title: "Team"
+    url: "/team/"
+  - title: "Expertise"
+    url: "/expertise/"
+  - title: "Technologies"
+    url: "/technologies/"
+  - title: "Projects"
+    url: "/projects/"
+  - title: "Partners"
+    url: "/partners/"
 
-- title: "Team"
-  url: "/team/"
-  side: left
-
-- title: "Expertise"
-  url: "/expertise/"
-  side: left
-
-- title: Technologies
-  url: "/technologies/"
-  side: left
-
-- title: "Projects"
-  url: "/projects/"
-  side: left
-
-- title: "Partners"
-  url: "/partners/"
+- title: "Services"
+  url: "/services/"
   side: left
 
 - title: Blog
