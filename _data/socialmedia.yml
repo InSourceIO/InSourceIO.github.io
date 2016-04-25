@@ -1,39 +1,34 @@
 - name: GitHub
   url: http://github.com/InSourceSoftware
   class: icon-github
-  title: "Code @ github.com"
+  title: "GitHub"
 
 - name: YouTube
   url: http://www.youtube.com/InSourceSoftware
   class: icon-youtube
-  title: "Videos and media @ youtube.com"
+  title: "YouTube"
 
 - name: Twitter
   url: http://twitter.com/InSourceSoftware
   class: icon-twitter
-  title: "Follow us @ twitter.com"
+  title: "Twitter"
 
 - name: LinkedIn
   url: http://www.linkedin.com/InSourceSoftware/
   class: icon-linkedin
-  title: "Follow us @ linkedin.com"
+  title: "LinkedIn"
 
 - name: YouTube Google+
   url: https://plus.google.com/u/0/+InSourceSoftware
   class: icon-googleplus
-  title: "YouTube Google+"
+  title: "Google+"
 
 - name: Facebook
   url: http://www.facebook.com/InSourceSoftware
   class: icon-facebook
-  title: "Follow us @ facebook.com"
+  title: "Facebook"
 
 - name: Instagram
   url: http://instagram.com/InSourceSoftware
   class: icon-instagram
-  title: "Follow us @ instagram.com"
-
-- name: Pinterest
-  url: http://www.pinterest.com/
-  class: icon-pinterest
-  title: "Follow us @ pinterest.com"
+  title: "Instagram"

@@ -5,7 +5,7 @@ layout: page
 #
 subheadline: "A first post"
 title: "Making this site"
-teaser: "This site was made with Jekyll, GitHub Pages, and the Feeling Response theme."
+teaser: "This site was made with Jekyll, GitHub Pages, and the Feeling Responsive theme."
 categories:
   - post
 tags:

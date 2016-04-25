@@ -13,15 +13,16 @@ name: 'InSource Software'
 # Delete the lines you don't need
 # about 5 elements are recomended
 github_username:  InSourceSoftware
-codepen_username: InSourceSoftware
+#codepen_username: InSourceSoftware
 facebook_username: InSourceSoftware
 twitter_username: InSourceSoftware
 google_plus_username: InSourceSoftware
 linkedin_username: InSourceSoftware
 instagram_username:  InSourceSoftware
-stack_of_username: InSourceSoftware
-reddit_username: InSourceSoftware
-tumblr_username: InSourceSoftware
+#pinterest_username: InSourceSoftware
+#stack_of_username: InSourceSoftware
+#reddit_username: InSourceSoftware
+youtube_username: InSourceSoftware
 blog_url: "/blog/"
 email: contact@insource.io
 
@@ -32,11 +33,11 @@ avatar: yes
 avatar_img_path: "https://avatars0.githubusercontent.com/u/18608462"
 
 front_img: yes
-front_img_path: "images/background.jpg"
+front_img_path: "images/header_unsplash_13.jpg"
 #front_img_path: "https://external.url/image.jpg"
 
 favicon_img: yes
-favicon_img_path: "imgs/favicon.ico"
+favicon_img_path: "assets/img/favicon-32x32.png"
 #favicon_img_path: "https://external.url/favicon.ico"
 
 #      _____ _ __          _____      __  __  _
