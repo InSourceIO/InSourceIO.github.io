@@ -8,15 +8,15 @@ layout: frontpage
 header:
   image_fullwidth: header_unsplash_21.jpg
 widget1:
-  title: "The Latest"
+  title: "Our Blog"
   url: "/blog/"
-  image: widget-1-302x182.jpg
+  image: startup-thumb.jpg
   text: "<em>Read about</em> the latest from InSource Software on our blog. Here you'll find posts from engineers about the things we're working on, such as search, big data, microservices, distributed systems, mobile development, advanced UX, and more."
 widget2:
   title: "Our Technology"
   url: "/about/"
   text: "<em>Get familiar</em> with the technologies and solutions we use for our customers. We use the latest technologies and bring core competencies from several disciplines of software engineering to the table to help modernize legacy platforms and optimize large-scale systems, in addition to building out the technology needed to compete in emerging markets."
-  image: widget-2-302x182.jpg
+  image: coffee-beans-thumb.jpg
 widget3:
   title: "Our Code"
   url: "https://github.com/InSourceSoftware/"
