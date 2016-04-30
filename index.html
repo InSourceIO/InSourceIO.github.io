@@ -24,7 +24,7 @@ permalink: /
             {% endif %}
 
             {% if site.avatar %}
-                <img src="{{ site.avatar_img_path }}" id="avatar" />
+                <a href="/home/"><img src="{{ site.avatar_img_path }}" id="avatar" /></a>
             {% endif %}
 
             <h1>{{ site.name }}</h1>
@@ -44,11 +44,15 @@ permalink: /
                     {% endif %}
 
                     {% if site.linkedin_username %}
-                    <li><a class="fa fa-2x fa-linkedin" href="https://linkedin.com/in/{{ site.linkedin_username }}"><span class="description">LinkedIn</span></a></li>
+                    <li><a class="fa fa-2x fa-linkedin" href="https://linkedin.com/company/{{ site.linkedin_username }}"><span class="description">LinkedIn</span></a></li>
                     {% endif %}
 
                     {% if site.google_plus_username %}
                     <li><a class="fa fa-2x fa-google-plus" href="https://plus.google.com/+{{ site.google_plus_username }}"><span class="description">Google+</span></a></li>
+                    {% endif %}
+
+                    {% if site.google_plus_url %}
+                    <li><a class="fa fa-2x fa-google-plus" href="{{ site.google_plus_url }}"><span class="description">Google+</span></a></li>
                     {% endif %}
 
                     {% if site.facebook_username %}

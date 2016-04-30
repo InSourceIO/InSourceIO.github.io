@@ -15,14 +15,15 @@ name: 'InSource Software'
 github_username:  InSourceSoftware
 #codepen_username: InSourceSoftware
 facebook_username: InSourceSoftware
-twitter_username: InSourceSoftware
-google_plus_username: InSourceSoftware
-linkedin_username: InSourceSoftware
-instagram_username:  InSourceSoftware
+twitter_username: InSourceOmaha
+#google_plus_username: InSourceSoftware
+google_plus_url: https://plus.google.com/u/0/b/116388734123404805483/116388734123404805483
+linkedin_username: insource-software
+#instagram_username:  InSourceSoftware
 #pinterest_username: InSourceSoftware
 #stack_of_username: InSourceSoftware
 #reddit_username: InSourceSoftware
-youtube_username: InSourceSoftware
+#youtube_username: InSourceSoftware
 blog_url: "/blog/"
 email: contact@insource.io
 
@@ -181,7 +182,7 @@ defaults:
 #   ___/ / /___/ /_/ /
 #  /____/_____/\____/    Verify Website to Webmaster Tools
 
-#google_author:             'https://plus.google.com/u/0/118311555303973066167'
+google_author:             'https://plus.google.com/u/0/b/116388734123404805483/116388734123404805483'
 #google_site_verification:  'Vk0IOJ2jwG_qEoG7fuEXYqv0m2rLa8P778Fi_GrsgEQ'
 #bing_webmastertools_id:    '0FB4C028ABCF07C908C54386ABD2D97F'
 # alexa_verify_id:         ''
@@ -267,7 +268,7 @@ sass:
 #
 # used in _includes/footer_scripts
 
-#google_analytics_tracking_id: UA-60112281-1
+google_analytics_tracking_id: UA-77117959-1
 
 
 

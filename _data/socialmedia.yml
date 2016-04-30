@@ -3,23 +3,24 @@
   class: icon-github
   title: "GitHub"
 
-- name: YouTube
-  url: http://www.youtube.com/InSourceSoftware
-  class: icon-youtube
-  title: "YouTube"
+#- name: YouTube
+#  url: http://www.youtube.com/InSourceSoftware
+#  class: icon-youtube
+#  title: "YouTube"
 
 - name: Twitter
-  url: http://twitter.com/InSourceSoftware
+  url: http://twitter.com/InSourceOmaha
   class: icon-twitter
   title: "Twitter"
 
 - name: LinkedIn
-  url: http://www.linkedin.com/InSourceSoftware/
+  url: https://www.linkedin.com/company/insource-software
   class: icon-linkedin
   title: "LinkedIn"
 
-- name: YouTube Google+
-  url: https://plus.google.com/u/0/+InSourceSoftware
+- name: Google+
+#  url: https://plus.google.com/u/0/+InSourceSoftware
+  url: https://plus.google.com/u/0/b/116388734123404805483/116388734123404805483
   class: icon-googleplus
   title: "Google+"
 
@@ -28,7 +29,7 @@
   class: icon-facebook
   title: "Facebook"
 
-- name: Instagram
-  url: http://instagram.com/InSourceSoftware
-  class: icon-instagram
-  title: "Instagram"
+#- name: Instagram
+#  url: http://instagram.com/InSourceSoftware
+#  class: icon-instagram
+#  title: "Instagram"
