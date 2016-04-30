@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page-fullwidth
 #
 # Content
 #
@@ -17,8 +17,8 @@ tags:
 #
 header:
     image_fullwidth: "header_unsplash_14.jpg"
-    caption: Making this site
-    caption_url: /
+    caption: Photo provided by Pixabay
+    caption_url: https://pixabay.com/
 image:
     title: post1-title.jpg
     thumb: post1-thumb.jpg
