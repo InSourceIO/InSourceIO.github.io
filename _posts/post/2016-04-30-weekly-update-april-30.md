@@ -45,13 +45,13 @@ With GitHub Pages already pre-supposed into the equation, experimenting with a p
 Step 3: Pick a theme
 ---
 
-This drives me crazy. I have done extensive web development in the past. But it takes forever. I'm not rolling my own website anymore, I just don't have time for it. So what to do? Luckily, there are lots of free themes available by people who are for more passionate about this aspect of development than I am. But even as you start the journey of choosing a theme, whether for Jekyll, Wordpress, Squarespace, Wix, or another CMS solution, you realize one thing very quickly.
+This drives me crazy. I have done extensive web development in the past. But it takes forever. I'm not rolling my own website anymore, I just don't have time for it. So what to do? Luckily, there are lots of free themes available by people who are far more passionate about this aspect of development than I am. But even as you start the journey of choosing a theme, whether for Jekyll, Wordpress, Squarespace, Wix, or another CMS solution, you realize one thing very quickly.
 
 This sucks. Not all themes are created equal. Further, most themes do a good job of giving a demo for the basic content, but are not good at giving you a comprehensive set of styles and options for building out a full-fledged website. What if I want to embed videos? What if I want an image gallery? What if I need to embed code snippets, quotes, or other content? What if I want a comprehensive set of consistent icons that goes beyond what the demo provides? Does it have styles for that? Are there multiple layouts to add some variety so the whole site doesn't look like it was kicked out in half a day by a college student?
 
-Another thing about Jekyll themes that I noticed right away, is that they are basically completely custom frameworks unto themselves. Each one is as different as the other, so that choosing a theme, is almost as heavy a decision as choosing the framework it's built upon.
+Another thing about Jekyll themes that I noticed right away, is that they are basically completely custom frameworks unto themselves. Each one is as different as the other, so that choosing a theme is almost as heavy a decision as choosing the framework it's built upon.
 
-Luckily, I stumbled across [Feeling Responsive][4]. While the look and feel needs some work, though it's quite nice as it is, the thing that struck me about this theme is that it was very comprehensive. Like when I see a Hollywood actor who has a band on the side, and you come to find out they're actually talented, I was impressed. It takes something above and beyond to create a theme this comprehensive, even if half the tools are given to you by a tool like Jekyll.
+Luckily, I stumbled across [Feeling Responsive][4]. While the look and feel needs some work, though it's quite nice as it is, the thing that struck me about this theme is that it was very comprehensive. Like when you see a Hollywood actor who has a band on the side, and you come to find out they're actually talented, I was impressed. It takes something above and beyond to create a theme this comprehensive, even if half the tools are given to you by something like Jekyll.
 
 Step 4: Start building
 ---
@@ -62,7 +62,7 @@ Again, possessing web development skills really helps here. If you don't have th
 
 So I started building and tweaking and modifying. At some point, you're adding content and then you start to realize you have none, and days go by without a real finished product. But that's beside the point. All this tweaking and modifying is basically a development project. And it takes about as long. Unless you already have a perfect picture in your mind of what the content and look will be, and then you're probably just ripping somebody else off. Either that, or you're a visionary, and then why are you wasting your time with this stuff anyway? You get where I'm going with this.
 
-Once I got into a little ways, I started getting a little derailed by the time consuming nature of building out all the content. And putting together unique images to add some visual appeal to the site, which I could tweak and vary for a lifetime before I get something really good.
+Once I got a little ways into it, I started getting a little derailed by the time consuming nature of building out all the content. And putting together unique images to add some visual appeal to the site, which I could tweak and vary for a lifetime before I get something really good.
 
 Step 5: Build a brand
 ---
@@ -71,7 +71,7 @@ Not only is it useful to be a web developer, but if you have some graphic design
 
 So at this point, I needed to finish building out the content by adding logos, and really starting to build the brand of this site. It's about this time, if not before, that you might want to consider picking a domain name and/or company name. If you come at it from the angle of building for an existing brand, this is easy. For me, I had to choose. Right now.
 
-I came up with insource.io as an available domain. Since I'm getting into the software engineering space, whether consulting, software product development, or something tangential to those, this name immediately struck me. While there are several companies with InSource in the name somewhere, it's not really copyrighted as it's just two English words, and one can easily attach a label to it to differentiate. InSource Software Solutions seems to be popular (there are several of those), but InSource Software, Inc. seems open. I could still be wrong, and won't be offended if I have to change it. But there you go. I've got a starting point.
+I came up with [insource.io][5] as an available domain. Since I'm getting into the software engineering space, whether consulting, software product development, or something tangential to those, this name immediately struck me. While there are several companies with InSource in the name somewhere, it's not really copyrighted as it's just two English words, and one can easily attach a label to it to differentiate. InSource Software Solutions seems to be popular (there are several of those), but InSource Software, Inc. seems open. I could still be wrong, and won't be offended if I have to change it. But there you go. I've got a starting point.
 
 Step 6: Expand your influence
 ---
@@ -82,13 +82,13 @@ So, you need to decide what social media platforms you're going to attach to, an
 
 I chose the following for now, as I don't see a use for any others yet:
 
-* GitHub (for open source, and hosting this site)
-* Twitter (the single best platform for shouting at the interwebz)
-* Google+ (which is attached to more compelling platforms)
-* YouTube (tutorials and vcasts are all the rage, downright useful, and a great way to get the word out)
-* LinkedIn (just 'cuz everybody in the business world is there)
-* Facebook (just 'cuz everybody not in the business world is there)
-* Instagram (just 'cuz)
+| [GitHub][6]     | For open source, and hosting this site. |
+| [Twitter][7]    | The single best platform for shouting at the interwebz. |
+| [LinkedIn][8]   | Just 'cuz everybody in the business world is there. |
+| [Google+][9]    | Which is attached to more compelling platforms. |
+| [Facebook][10]  | Just 'cuz everybody not in the business world is there. |
+| [YouTube][11]   | Tutorials and vcasts are all the rage, downright useful, and a great way to get the word out. |
+| [Instagram][12] | Just 'cuz. |
 
 Step 7: Win
 ---
@@ -101,9 +101,14 @@ You're here, aren't you?
  [2]: https://www.jetbrains.com/idea/
  [3]: https://git-scm.com/
  [4]: http://phlow.github.io/feeling-responsive/
- [5]: #
- [6]: #
- [7]: #
- [8]: #
- [9]: #
- [10]: #
+ [5]: http://insource.io/
+ [6]: http://github.com/InSourceSoftware
+ [7]: http://twitter.com/InSourceOmaha
+ [8]: https://www.linkedin.com/company/insource-software
+ [9]: https://plus.google.com/u/0/b/116388734123404805483/116388734123404805483
+ [10]: http://www.facebook.com/InSourceSoftware
+ [11]: #
+ [12]: #
+ [13]: #
+ [14]: #
+ [15]: #
