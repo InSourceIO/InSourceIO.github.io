@@ -3,11 +3,6 @@
   class: icon-github
   title: "GitHub"
 
-#- name: YouTube
-#  url: http://www.youtube.com/InSourceSoftware
-#  class: icon-youtube
-#  title: "YouTube"
-
 - name: Twitter
   url: http://twitter.com/InSourceOmaha
   class: icon-twitter
@@ -29,7 +24,13 @@
   class: icon-facebook
   title: "Facebook"
 
-#- name: Instagram
-#  url: http://instagram.com/InSourceSoftware
-#  class: icon-instagram
-#  title: "Instagram"
+- name: YouTube
+#  url: http://www.youtube.com/InSourceSoftware
+  url: https://www.youtube.com/channel/UCV28mr5gKHS2JDM1_ZoAmFA
+  class: icon-youtube
+  title: "YouTube"
+
+- name: Instagram
+  url: http://instagram.com/InSourceSoftware
+  class: icon-instagram
+  title: "Instagram"
