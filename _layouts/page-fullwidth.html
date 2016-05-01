@@ -30,7 +30,17 @@ format: page-fullwidth
 			</p>
 			{% endif %}
 
-			{{ content }}
+			<div itemprop="articleSection">
+				{{ content }}
+			</div>
+
+			{% if page.show_meta == true %}
+			{% include _meta_information.html %}
+			{% endif %}
+
+			{% if page.comments == true %}
+			{% include _comments.html %}
+			{% endif %}
 		</article>
 	</div><!-- /.medium-12.columns -->
 </div><!-- /.row -->
