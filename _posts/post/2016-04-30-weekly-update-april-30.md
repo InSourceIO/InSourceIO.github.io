@@ -107,8 +107,8 @@ You're here, aren't you?
  [8]: https://www.linkedin.com/company/insource-software
  [9]: https://plus.google.com/u/0/b/116388734123404805483/116388734123404805483
  [10]: http://www.facebook.com/InSourceSoftware
- [11]: #
- [12]: #
+ [11]: https://www.youtube.com/channel/UCV28mr5gKHS2JDM1_ZoAmFA
+ [12]: http://instagram.com/InSourceSoftware
  [13]: #
  [14]: #
  [15]: #
