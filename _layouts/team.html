@@ -1,0 +1,20 @@
+---
+layout: default
+format: team
+---
+<div id="header-home">
+  <div class="row">
+    <div class="small-12 columns">
+    </div><!-- /.medium-4.columns -->
+  </div><!-- /.row -->
+</div><!-- /#header-home -->
+
+<div class="row t60">
+  {% for member in page.members %}
+    {% include _team-widget.html widget=member %}
+  {% endfor %}
+</div><!-- /.row -->
+
+<div class="row">
+  {{ content }}
+</div><!-- /.row -->

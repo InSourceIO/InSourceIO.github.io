@@ -42,8 +42,49 @@ $primary-color: $ci-1;
 $secondary-color: $ci-2;
 $alert-color: $ci-5;
 $success-color: $ci-6;
-$warning-color: $ci-4;
+$warning-color: $ci-3;
 $info-color: $ci-1;
+
+
+
+/* Colors
+------------------------------------------------------------------- */
+.primary {
+  color: $primary-color;
+}
+.secondary {
+  color: $secondary-color;
+}
+.alert {
+  color: $alert-color;
+}
+.success {
+  color: $success-color;
+}
+.warning {
+  color: $warning-color;
+}
+.info {
+  color: $info-color;
+}
+.primary-bg {
+  background-color: $primary-color;
+}
+.secondary-bg {
+  background-color: $secondary-color;
+}
+.alert-bg {
+  background-color: $alert-color;
+}
+.success-bg {
+  background-color: $success-color;
+}
+.warning-bg {
+  background-color: $warning-color;
+}
+.info-bg {
+  background-color: $info-color;
+}
 
 
 
