@@ -20,9 +20,9 @@ header:
     caption: Photo provided by Pixabay
     caption_url: https://pixabay.com/
 image:
-    title: post1-title.jpg
-    thumb: post1-thumb.jpg
-    homepage: post1-home.jpg
+    title: posts/post1-title.jpg
+    thumb: posts/post1-thumb.jpg
+    homepage: posts/post1-home.jpg
     caption: Photo provided by Pixabay
     caption_url: https://pixabay.com/en/keyboard-computer-type-typing-pc-86438/
 mediaplayer: false

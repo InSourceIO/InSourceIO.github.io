@@ -18,9 +18,9 @@ header:
     caption: Photo provided by Pixabay
     caption_url: https://pixabay.com/
 image:
-    title: notepad-title.jpg
-    thumb: notepad-thumb.jpg
-    homepage: notepad-home.jpg
+    title: posts/notepad-title.jpg
+    thumb: posts/notepad-thumb.jpg
+    homepage: posts/notepad-home.jpg
     caption: Photo provided by Pixabay
     caption_url: https://pixabay.com/
 ---
