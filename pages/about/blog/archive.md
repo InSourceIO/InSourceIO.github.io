@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Blog Archive"
+title: "Archive"
 teaser: "View all blog posts in the blog archive. Click on a headline to read the teaser."
 breadcrumb: true
 header:
