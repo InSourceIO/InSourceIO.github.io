@@ -30,6 +30,8 @@ socialmedia:
 breadcrumb: true
 ---
 
+![Stephen Riesenberg](/images/avatars/sjohnr.jpg)
+
 {% include _social-media-icons.html widget=page.socialmedia %}
 
 ## Stephen's Resume
