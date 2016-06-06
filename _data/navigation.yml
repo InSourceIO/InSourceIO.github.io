@@ -11,19 +11,19 @@
   side: left
   dropdown:
   - title: "Team"
-    url: "/team/"
+    url: "/about/team/"
   - title: "Expertise"
-    url: "/expertise/"
+    url: "/about/expertise/"
   - title: "Technologies"
-    url: "/technologies/"
+    url: "/about/technologies/"
   - title: "Projects"
-    url: "/projects/"
-  - title: "Partners"
-    url: "/partners/"
+    url: "/about/projects/"
+#  - title: "Partners"
+#    url: "/about/partners/"
 
-- title: "Services"
-  url: "/services/"
-  side: left
+#- title: "Services"
+#  url: "/services/"
+#  side: left
 
 - title: Blog
   url: "/blog/"
