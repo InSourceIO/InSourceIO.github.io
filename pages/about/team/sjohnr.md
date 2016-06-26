@@ -64,7 +64,7 @@ breadcrumb: true
 * Schema
 * SOAP
 
-### Technologies
+### Technologies &amp; Frameworks
 
 * Java EE
 * Spring
@@ -73,6 +73,7 @@ breadcrumb: true
 * JBoss
 * Tomcat
 * Lucene
+* Solr
 * Elasticsearch
 * Logstash
 * Kibana
@@ -96,9 +97,9 @@ breadcrumb: true
 #### D3 Technology, Inc.
 
 <p class="right"><em>2014 - present</em></p>
-**Senior &amp; Principal Software Engineer**
+**Senior &amp; Lead Software Engineer**
 
-Added features and implemented integrations for the D3 Insight and D3 Banking platforms, including a star-schema analytics API, multi-factor authentication, SMS alerts, an Open Financial eXchange server, core live features, flexible user profiles, and integration into a custom ESB for real-time memo posts, alerting, core live, and stop payments; Implemented streamlined JIRA workflows and managed multiple projects and Scrum boards for 7+ development teams; Regularly advised the Scrum coach and resource managers on development processes and continuous improvement methodologies; Provided mentoring, training, technical leadership and project management.
+Added features and implemented integrations for the D3 Insight and D3 Banking platforms, including a star-schema analytics API, multi-factor authentication, SMS and push alerts, an Open Financial eXchange server, core live features, flexible user profiles, and integration into a custom ESB for real-time memo posts, alerting, core live, and stop payments; Implemented streamlined JIRA workflows and managed multiple projects and Scrum boards for 7+ development teams; Regularly advised the Scrum coach and resource managers on development processes and continuous improvement methodologies; Provided mentoring, training, technical leadership, architecture and project management.
 
 #### Solutionary, Inc.
 
