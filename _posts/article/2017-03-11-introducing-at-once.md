@@ -29,12 +29,8 @@ mediaplayer: false
 
 [sjohnr][1] / [at-once][2]
 
-<!-- Place this tag where you want the button to render. -->
 <a class="github-button" href="https://github.com/sjohnr/at-once" data-icon="octicon-star" data-style="mega" data-count-href="/sjohnr/at-once/stargazers" data-count-api="/repos/sjohnr/at-once#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star sjohnr/at-once on GitHub">Star</a>
-<!-- Place this tag where you want the button to render. -->
 <a class="github-button" href="https://github.com/sjohnr/at-once/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/sjohnr/at-once/network" data-count-api="/repos/sjohnr/at-once#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork sjohnr/at-once on GitHub">Fork</a>
-<!-- Place this tag in your head or just before your close body tag. -->
-<script async defer src="https://buttons.github.io/buttons.js"></script>
 
 If you haven't heard of the <abbr title="ZeroMQ Realtime Exchange">ZRE</abbr> protocol, or ZyRE, you should head over to [Github][3] to read about it.
 
@@ -54,13 +50,9 @@ Well, thanks for sticking with me this far. If you're interested in hearing more
 
 [sjohnr][1] / [at-once][2]
 
-<!-- Place this tag where you want the button to render. -->
 <a class="github-button" href="https://github.com/sjohnr/at-once" data-icon="octicon-star" data-style="mega" data-count-href="/sjohnr/at-once/stargazers" data-count-api="/repos/sjohnr/at-once#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star sjohnr/at-once on GitHub">Star</a>
-<!-- Place this tag where you want the button to render. -->
 <a class="github-button" href="https://github.com/sjohnr/at-once/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/sjohnr/at-once/network" data-count-api="/repos/sjohnr/at-once#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork sjohnr/at-once on GitHub">Fork</a>
-<!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
-
 
  [1]: https://github.com/sjohnr
  [2]: https://github.com/sjohnr/at-once
