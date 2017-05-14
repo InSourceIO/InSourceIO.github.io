@@ -21,7 +21,13 @@
 {% endcapture %}<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{ title }}</title>
-	<link rel="stylesheet" type="text/css" href="{{ url }}/assets/css/styles_feeling_responsive.css">
+
+    <link rel="stylesheet" type="text/css" href="{{ url }}/assets/css/styles_feeling_responsive.css">
+
+  {% if site.asciidoctor-enabled == true %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css">
+  {% endif %}
+
 	<script src="{{ url }}/assets/js/modernizr.min.js"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
@@ -40,11 +46,13 @@
 
 	<!-- Search Engine Optimization -->
 	<meta name="description" content="{{ description }}">
-  	{% if site.google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification}}">{% endif %}
+	{% if site.google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification}}">{% endif %}
 	{% if site.bing_webmastertools_id %}<meta name="msvalidate.01" content="{{ site.bing_webmastertools_id }}" >{% endif %}
+	{% if site.yandex_site_verification %}<meta name="yandex-verification" content="{{ site.yandex_site_verification }}">{% endif %}
 	{% if site.google_author %}<link rel="author" href="{{ site.google_author }}">{% endif %}
 	{% if site.alexa_verify_id %}<meta name="alexaVerifyID" content="{{ site.alexa_verify_id }}">{% endif %}
-	{% if page.noindex == true %}<meta name="robots" content="noindex">{% endif %}
+	{% if page.noindex == true or layout.noindex == true %}<meta name="robots" content="noindex">{% endif %}
+	<link rel="canonical" href="{{ url }}{{ page.url }}">
 
 
 	<!-- Facebook Open Graph -->
