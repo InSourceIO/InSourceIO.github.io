@@ -1,0 +1,37 @@
+---
+layout: minimal
+title: Search Results
+headline: Search
+subheadline: Powered by Google
+noindex: true
+breadcrumb: false
+---
+<section class="section-border text-center text-md-left">
+  <div class="container">
+    {% include breadcrumb.html class='pull-md-right' %}
+    <h5 class="rd-navbar-search-stats text-uppercase letter-spacing-1 pull-md-left inset-4"></h5>
+  </div>
+</section>
+
+<section class="well well-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="row">
+          <div style="padding-bottom: 40px;" class="col-xs-12 section-border">
+            <h2>New Search</h2>
+            <p class="lead">Not what you're looking for? Try your search again.</p>
+            <form class="offset-1" method="get" action="{{ site.baseurl }}/search/">
+              <div class="form-group">
+                <label for="search" class="text-uppercase font-secondary"></label>
+                <input type="text" placeholder="Search" id="search" name="q" class="rd-navbar-search-box width-1 form-control" />
+                <button type="submit" class="btn btn-primary btn-xs round-xl">Search</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="rd-navbar-search-results"></div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,51 @@
+---
+layout: page
+title: Blog
+headline: What We Say
+subheadline: Hear from our engineers
+noindex: true
+---
+{% for post in paginator.posts %}
+  <div class="col-xs-12 section-border">
+    <article class="thumbnail well">
+      {% if post.image %}
+        <img src="{{ site.baseurl }}/images/{{ post.image.title }}" alt="{{ post.image.caption }}" />
+      {% endif %}
+      <div class="caption">
+        <h4><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
+
+        {% if post.subheadline %}
+          <h4 class="lead offset-2 text-justify">{{ post.subheadline }}</h4>
+        {% endif %}
+
+        {% if post.teaser %}
+          <p>{{ post.teaser }}</p>
+        {% else %}
+          <p>{{ post.excerpt }}</p>
+        {% endif %}
+
+
+        <div class="blog-info">
+          <div class="pull-md-left">
+            <time datetime="{{ post.date | date_to_xmlschema }}" class="meta material-icons-schedule">{{ post.date | date: '%b %-d, %Y' }}</time>
+            <a href="{{ site.data.authors[post.author].url }}" class="badge material-icons-person_outline font-secondary">{{ post.author }}</a>
+            <span class="tags">
+              <a class="badge material-icons-local_offer"></a>
+              {% for cat in post.categories %}
+                <a href="{{ site.baseurl }}/blog/{{ cat }}/" class="post-tag round-xl small">{{ cat }}</a>
+              {% endfor %}
+            </span>
+            <span class="tags">
+              <a class="badge material-icons-local_offer"></a>
+              {% for tag in post.tags %}
+                <span class="post-tag round-xl small">{{ tag }}</span>
+              {% endfor %}
+            </span>
+            <a href="{{ post.url | prepend: site.baseurl }}#comments" class="badge material-icons-chat_bubble_outline font-secondary">{{ site.data.comments[post.slug] | size }}</a>
+          </div>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="btn-link text-bold">Read More</a>
+        </div>
+      </div>
+    </article>
+  </div>
+{% endfor %}

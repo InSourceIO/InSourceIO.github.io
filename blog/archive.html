@@ -1,0 +1,80 @@
+---
+layout: default
+title: Archive
+headline: The Archives
+subheadline: "In Chronological Order"
+---
+<section class="section-border text-center text-md-left">
+  <div class="container">
+    {% include breadcrumb.html %}
+  </div>
+</section>
+
+<section class="text-center text-md-left offset-1 timeline">
+  <div class="container">
+    <div class="row">
+      {% assign month = site.posts.first.date | date: '%B %Y' %}
+      <div class="col-xs-12 text-left text-md-center">
+        <time datetime="{{ month | date_to_xmlschema }}" class="h5 meta-timeline text-uppercase">{{ month }}</time>
+      </div>
+
+      <div class="col-xs-11 col-md-5 col-md-offset-0">
+        {% for post in site.posts %}
+          {% assign cur = post.date | date: '%B %Y' %}
+          {% assign x = forloop.index0 | modulo: 2 %}
+          {% if cur == month and x == 0 %}
+            {% include _post.html thumbnail=true gallery=true %}
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="col-xs-11 col-md-5 col-md-offset-2 inset-1 timeline-right">
+        {% for post in site.posts %}
+          {% assign cur = post.date | date: '%B %Y' %}
+          {% assign x = forloop.index0 | modulo: 2 %}
+          {% if cur == month and x == 1 %}
+            {% include _post.html thumbnail=true gallery=true %}
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="col-xs-12 timeline-hidden">
+        <div class="row">
+          {% for dummy in site.posts %}
+            {% assign cur = dummy.date | date: '%B %Y' %}
+            {% if month != cur %}
+              {% assign month = cur %}
+              <div class="col-xs-12 text-left text-md-center">
+                <time datetime="{{ month | date_to_xmlschema }}" class="h5 meta-timeline text-uppercase">{{ month }}</time>
+              </div>
+
+              <div class="col-xs-11 col-md-5 col-md-offset-0">
+                {% for post in site.posts %}
+                  {% assign cur = post.date | date: '%B %Y' %}
+                  {% assign x = forloop.index0 | modulo: 2 %}
+                  {% if cur == month and x == 0 %}
+                    {% include _post.html thumbnail=true gallery=true %}
+                  {% endif %}
+                {% endfor %}
+              </div>
+              <div class="col-xs-11 col-md-5 col-md-offset-2 inset-1 timeline-right">
+                {% for post in site.posts %}
+                  {% assign cur = post.date | date: '%B %Y' %}
+                  {% assign x = forloop.index0 | modulo: 2 %}
+                  {% if cur == month and x == 1 %}
+                    {% include _post.html thumbnail=true gallery=true %}
+                  {% endif %}
+                {% endfor %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="col-xs-12 text-left text-md-center offset-4">
+        <span class="btn btn-primary round-xl timeline-btn">
+          <span>load more</span> <span>hide</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

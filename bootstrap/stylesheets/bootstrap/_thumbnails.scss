@@ -1,0 +1,201 @@
+//
+// Thumbnails
+// --------------------------------------------------
+
+// Mixin and adjust the regular image class
+.thumbnail {
+
+  margin-left: auto;
+  margin-right: auto;
+
+  //display: block;
+  //padding: $thumbnail-padding;
+  //margin-bottom: $line-height-computed;
+  //line-height: $line-height-base;
+  //background-color: $thumbnail-bg;
+  //border: 1px solid $thumbnail-border;
+  //border-radius: $thumbnail-border-radius;
+  //@include transition(border .2s ease-in-out);
+
+  //> img,
+  //a > img {
+  //  @include img-responsive;
+  //  margin-left: auto;
+  //  margin-right: auto;
+  //}
+
+  // [converter] extracted a&:hover, a&:focus, a&.active to a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active
+
+  // Image captions
+  .caption {
+    //padding: $thumbnail-caption-padding;
+    //color: $thumbnail-caption-color;
+    margin-top: 20px;
+    font-size: 16px;
+
+    p.small.text-uppercase{
+      letter-spacing: 0;
+    }
+
+    p + * {
+      margin-top: 20px;
+    }
+
+    h4 + * {
+      margin-top: 21px;
+    }
+
+    &.offset-1{
+      margin-top: 35px;
+    }
+
+  }
+}
+
+// Add a hover state for linked versions only
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: $link-color;
+}
+
+.thumbnail-3 {
+  max-width: 270px;
+  // Image captions
+  .caption {
+
+  }
+}
+
+.thumbnail-4 {
+  @media (max-width: 991px) {
+    max-width: 370px;
+  }
+  // Image captions
+  .caption {
+
+  }
+}
+
+.thumbnail-4_col10 {
+  @media (max-width: 991px){
+    max-width: 468px;
+  }
+  // Image captions
+  .caption {
+
+  }
+}
+
+.thumbnail-6 {
+  // Image captions
+  .caption {
+
+  }
+  @media (max-width: 991px) {
+    max-width: 570px;
+  }
+}
+
+.thumbnail-variant-2{
+  position: relative;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  background: #000;
+
+  &.width_20{
+    width: 100%;
+    @media (min-width: $screen-xs) {
+      width: 50%;
+    }
+    @media (min-width: $screen-sm) {
+      width: 33%;
+    }
+    @media (min-width: $screen-md) {
+      width: 20%;
+    }
+  }
+
+  &.width_40{
+    width: 100%;
+    @media (min-width: $screen-xs) {
+      width: 50%;
+    }
+    @media (min-width: $screen-sm) {
+      width: 33%;
+    }
+    @media (min-width: $screen-md) {
+      width: 40%;
+    }
+  }
+
+  .icon{
+    position: absolute;
+    opacity: 0;
+    top: 19%;
+    left: 50%;
+    @include transform(translateX(-50%));
+  }
+  h4{
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    top: 100%;
+    transition: .8s;
+    font-size: 28px;
+    min-width: 260px;
+    left: 50%;
+    @include transform(translateX(-50%));
+    letter-spacing: 0.02em;
+    line-height: (36/28);
+    font-weight: 700;
+    small{
+      margin-top: 20px;
+      display: block;
+      color: inherit;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    @media (max-width: 1400px) {
+      font-size: 19px;
+      small{
+        font-size: 10px;
+      }
+    }
+  }
+  a:hover{
+    color: lighten($brand-primary,40%);
+  }
+
+  .caption{
+    transition: .4s;
+    position: absolute;
+    background: rgba($brand-primary,.58);
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+
+  }
+  &:hover{
+    .caption{
+      opacity: 1;
+    }
+    h4{
+      top: 39%;
+      opacity: 1;
+      @media (max-width: 1400px){
+        top: 42%;
+      }
+    }
+    .icon{
+      opacity: 1;
+    }
+  }
+}

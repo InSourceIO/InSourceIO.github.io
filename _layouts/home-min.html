@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" class="wide wow-animation">
+  {% include head.html %}
+
+  <body>
+    <div class="page">
+      {% include header-min.html %}
+
+      <main class="page-content">
+        {{ content }}
+      </main>
+
+      {% include footer-light-min.html %}
+    </div>
+
+    <script src="{{ site.baseurl }}/js/core.min.js"></script>
+    <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
+    <script src="{{ site.baseurl }}/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+---
+layout: page
+title: Posts
+headline: Posts
+subheadline: Hear from our engineers
+noindex: true
+---
+{% for post in site.categories.['posts'] %}
+  <div class="col-md-6">
+    {% include _post.html thumbnail=true %}
+  </div>
+{% endfor %}

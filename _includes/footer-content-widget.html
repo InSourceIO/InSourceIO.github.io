@@ -1,0 +1,61 @@
+<section class="footer-content text-center text-sm-left">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-lg-3">
+        <a href="{{ site.url }}{{ site.baseurl }}/" class="brand-name">
+          <img src="{{ site.baseurl }}/images/{{ site.logo2 }}" alt="{{ site.title }}">
+        </a>
+        <p>{{ site.slogan }}</p>
+        <address>
+          <p></p>
+          {{ site.address }}
+        </address>
+        <div class="contact-info">
+          <dl>
+            <dt>Phone</dt>
+            <dd><a href="callto:{{ site.phone }}">{{ site.phone }}</a></dd>
+            <dt>Email</dt>
+            <dd><a href="mailto:{{ site.email }}">{{ site.email }}</a></dd>
+          </dl>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-2 well-min">
+        {% for menu in site.data.network %}
+          <h6 class="text-uppercase">{{ menu.title }}</h6>
+          <ul class="marked-list">
+            {% for item in menu.items %}
+              <li><a href="{{ item.url }}" class="{{ item.class }}" target="_blank" title="{{ item.title }}">{{ item.name }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endfor %}
+      </div>
+      <div class="col-sm-6 col-lg-3 well-min">
+        <h6>RECENT POSTS</h6>
+        {% for post in site.posts limit: 3 %}
+          <article class="text-primary">
+            <p><a href="{{ post.url | prepend: site.baseurl }}" class="text-primary">{{ post.title }}</a></p>
+            <time datetime="{{ post.date | date_to_xmlschema }}" class="text-light-clr">{{ post.date | date: '%b %-d, %Y' }}</time>
+          </article>
+        {% endfor %}
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <p class="count">1<span>Partner</span></p>
+        <p class="count">Countless<span>Opportunities</span></p>
+        <p>Subscribe to Our Newsletter to get Important News, Amazing Offers & Inside Scoops:</p>
+        <form method="post" action="https://script.google.com/macros/s/AKfycbxeWuqOhQDk39-lqzSjTO47p2v3kVa3BgYHTN4gf1SLMIf3mrSK/exec" class="rd-mailform">
+          <input type="hidden" name="form-type" value="subscribe" />
+          <div class="form-group">
+            <label for="email-footer" class="sr-only">E-mail</label>
+            <input type="text" id="email-footer" name="email" placeholder="Enter your e-mail" data-constraints="@NotEmpty @Email" class="form-control" />
+          </div>
+          <button type="submit" class="btn btn-primary round-xl btn-sm">Subscribe</button>
+          <div class="mfInfo"></div>
+        </form>
+        <div class="socials">
+          <a href="http://github.com/{{ site.github_username }}" class="fa-github"></a>
+          <a href="{{ site.url }}{{ site.baseurl }}/feed.xml" class="fa-rss"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,54 @@
+---
+layout: minimal
+---
+<section class="text-center text-md-left well well-sm section-border">
+  <div class="container">
+    <div class="row">
+      {% if page.sidebar.position == 'left' %}
+        <div class="col-md-3 sidebar">
+          {% if page.sidebar.template %}
+            {% include {{ page.sidebar.template }} %}
+          {% else %}
+            {% include sidebar-content.html %}
+          {% endif %}
+        </div>
+        <div class="col-md-8 col-md-offset-1">
+          {{ content }}
+        </div>
+      {% elsif page.sidebar.position == 'right' %}
+        <div class="col-md-8">
+          {{ content }}
+        </div>
+        <div class="col-md-3 col-md-offset-1 inset-sm sidebar">
+          {% if page.sidebar.template %}
+            {% include {{ page.sidebar.template }} %}
+          {% else %}
+            {% include sidebar-content.html %}
+          {% endif %}
+        </div>
+      {% else %}
+        <div class="col-xs-12">
+          {{ content }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% if paginator.total_pages > 1 %}
+  <section class="well text-center text-md-left">
+    <div class="container">
+      <div aria-label="First group" role="group" class="col-inset-2 text-center btn-group">
+        {% for page in (1..paginator.total_pages) %}
+          {% if page == paginator.page %}
+            <span href="#" class="btn btn-default round-small active">{{ page }}</span>
+          {% elsif page == 1 %}
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn-default round-small">{{ page }}</a>
+          {% else %}
+            <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="btn btn-default round-small">{{ page }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endif %}

@@ -1,0 +1,60 @@
+/*
+* Static Layout
+*/
+
+$navbar-static-nav-indent: 2.9%;
+
+$navbar-static-nav-color: $navbar-nav-color;
+$navbar-static-nav-background: $navbar-nav-background;
+$navbar-static-nav-hover-color: $navbar-nav-hover-color;
+$navbar-static-nav-hover-background: $navbar-nav-hover-background;
+$navbar-static-nav-active-color: $navbar-nav-active-color;
+$navbar-static-nav-active-background: $navbar-nav-active-background;
+
+
+.rd-navbar-static {
+  display: block;
+
+  .rd-navbar-panel, .rd-navbar-nav-wrap {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .rd-navbar-panel {
+    text-align: left;
+    min-width: 180px;
+    @media (min-width: 1200px){
+      min-width: 300px;
+    }
+  }
+
+  .rd-navbar-nav-wrap {
+    width: 100%;
+    text-align: right;
+  }
+
+  .rd-navbar-nav{
+    margin-left: -$navbar-static-nav-indent;
+
+    > li {
+      display: inline-block;
+      margin-left: $navbar-static-nav-indent;
+    }
+    @media (max-width: 1199px){
+      margin-left: -5%;
+    >li{
+      margin-left: 3%;
+    }
+    }
+  }
+
+  // RD Navbar States
+  .rd-navbar-static--visible{
+    display: block;
+  }
+
+  .rd-navbar-static--hidden{
+    display: none;
+  }
+}
+

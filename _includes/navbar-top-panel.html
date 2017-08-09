@@ -1,0 +1,8 @@
+<div class="rd-navbar-top-panel">
+  <div class="rd-navbar-inner">
+    <button data-rd-navbar-toggle=".list-inline, .fa-envelope, .fa-phone, .material-icons-shopping_cart" class="rd-navbar-collapse-toggle"><span></span></button>
+    <a href="mailto:{{ site.email }}" class="fa-envelope">{{ site.email }}</a>
+    <a href="callto:{{ site.phone }}" class="fa-phone">{{ site.phone }}</a>
+    {% include social.html items=site.data.socialmedia right=true %}
+  </div>
+</div>

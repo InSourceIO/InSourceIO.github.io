@@ -1,0 +1,122 @@
+//
+// Wells
+// --------------------------------------------------
+
+// Base class
+.well {
+  //min-height: 20px;
+  //padding: 19px;
+  //margin-bottom: 20px;
+  //background-color: $well-bg;
+  //border: 1px solid $well-border;
+  //border-radius: $border-radius-base;
+  //@include box-shadow(inset 0 1px 1px rgba(0,0,0,.05));
+  //blockquote {
+  //  border-color: #ddd;
+  //  border-color: rgba(0,0,0,.15);
+  //}
+}
+
+.well {
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+.well-min{
+  padding-top: 55px;
+  @media (min-width: $screen-sm-min) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+}
+
+// Sizes
+.well-lg {
+  @media (min-width: 768px) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+.well-sm {
+  @media (min-width: 768px) {
+    padding-top: 75px;
+    padding-bottom: 90px;
+  }
+  &--inset-1 {
+    padding-bottom: 0;
+  }
+  &--inset-2 {
+    padding-top: 195px;
+  }
+}
+
+.well-xl {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  @media (min-width: 768px) {
+    padding-top: 240px;
+    padding-bottom: 240px;
+  }
+}
+
+.well-inset {
+  padding-top: 20px;
+}
+
+.well-inset-2 {
+  @media (min-width: $screen-sm) {
+    padding-bottom: 90px;
+  }
+}
+
+.well-inset-3 {
+  @media (min-width: $screen-sm) {
+    padding-bottom: 160px;
+  }
+}
+
+.well-parallax {
+  padding-bottom: 120px;
+  height: 100vh;
+  padding-top: 120px;
+  @media (min-width: $screen-xs-min) {
+    padding-top: 34px;
+  }
+  @media (min-width: $screen-sm-min) {
+    padding-top: 120px;
+
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+  &.jumbotron {
+    vertical-align: middle;
+    display: inline-block;
+    width: 100%;
+    @media (max-width: 767px) {
+      .btn {
+        display: block;
+      }
+    }
+  }
+  &:before {
+    content: '';
+    height: 25%;
+    display: inline-block;
+    vertical-align: middle;
+    @media (min-width: 1200px) {
+      height: 20%;
+    }
+    @media (max-height: 750px) {
+      height: 15%;
+    }
+    @media (max-width: 767px) {
+      @media (max-height: 780px) {
+        height: 5%;
+      }
+    }
+  }
+}

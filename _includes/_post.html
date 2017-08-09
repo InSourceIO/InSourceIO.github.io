@@ -1,0 +1,26 @@
+<article class="thumbnail well view-animate slow-hover{% unless include.gallery %} section-border{% endunless %}">
+  <div class="image-slow-wrapper">
+    {% if include.thumbnail %}
+      <img src="{{ site.baseurl }}/images/{{ post.image.thumb }}" alt="{{ post.image.caption }}">
+    {% else %}
+      <img src="{{ site.baseurl }}/images/{{ post.image.title }}" alt="{{ post.image.caption }}">
+    {% endif %}
+  </div>
+  <div class="caption{% if include.gallery %} max-width{% endif %}">
+    <h4><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
+
+    {% if post.teaser %}
+      <p class="text-dark-variant-2">{{ post.teaser }}</p>
+    {% else %}
+      <p class="text-dark-variant-2">{{ post.exceprt }}</p>
+    {% endif %}
+
+    <div class="blog-info">
+      <div class="pull-md-left">
+        <time datetime="{{ post.date | date_to_xmlschema }}" class="meta material-icons-schedule">{{ post.date | date: '%b %-d, %Y' }}</time>
+        <a href="{{ post.url | prepend: site.baseurl }}#comments" class="badge material-icons-chat_bubble_outline font-secondary">{{ site.data.comments[post.slug] | size }}</a>
+      </div>
+      <a href="{{ post.url | prepend: site.baseurl }}" class="text-bold btn-link">Read More</a>
+    </div>
+  </div>
+</article>

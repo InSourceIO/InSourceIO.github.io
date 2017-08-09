@@ -1,0 +1,13 @@
+<h1 class="text-uppercase">{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}{% endif %}<small>{{ page.subheadline }}</small></h1>
+
+{% if page.description %}
+  <p class="big">{{ page.description }}</p>
+{% endif %}
+
+{% if page.links %}
+  <div class="btn-group-variant">
+    {% for link in page.links %}
+      <a class="btn btn-default round-xl btn-sm" href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a>
+    {% endfor %}
+  </div>
+{% endif %}

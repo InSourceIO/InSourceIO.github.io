@@ -1,0 +1,199 @@
+/*
+* @subsection   Easy Responsive Tabs
+*
+* @description  Describes style declarations for Easy Responsive Tabs extension
+*
+* @author       Samson Onna
+* @link         samson3d@gmail.com
+* @version      1.0.0
+*/
+.responsive-tabs {
+
+  .resp-tabs-list {
+    display: none;
+
+    > li {
+      position: relative;
+      display: inline-block;
+
+      &.resp-tab-active {
+        &:before, &:after {
+          display: block;
+        }
+
+        > .btn {
+          border-bottom-color: transparent;
+
+          &:hover {
+            color: inherit;
+            background: transparent;
+          }
+        }
+      }
+
+      > .btn {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        transition: none;
+
+        &:hover {
+          transition: .3s all ease;
+        }
+      }
+
+      &:before, &:after {
+        content: '';
+        display: none;
+        position: absolute;
+        width: 5000px;
+        border-bottom: 2px solid;
+        bottom: 0;
+      }
+
+      &:before {
+        right: 100%;
+        margin-right: -2px;
+      }
+
+      &:after {
+        left: 100%;
+        margin-left: -2px;
+      }
+    }
+  }
+}
+
+.resp-accordion, .resp-tabs-list > li {
+  &:hover, &.resp-tab-active {
+  }
+
+  &.resp-tab-active {
+  }
+}
+
+.resp-accordion {
+  display: block;
+
+  > .btn {
+    display: block;
+  }
+}
+
+.resp-tab-content {
+  display: none;
+}
+
+.resp-tab-content + .resp-accordion {
+  //margin-top: 10px;
+}
+
+.responsive-tabs:not(.resp-easy-accordion) {
+  @media (min-width: 768px) {
+    .resp-accordion {
+      display: none;
+    }
+
+    .resp-tabs-list {
+      display: block;
+    }
+  }
+}
+
+.resp-easy-accordion {
+  .resp-arrow {
+    position: absolute;
+    top: 14px;
+    left: 17px;
+    width: 17px;
+    height: 17px;
+    text-align: center;
+    font: 400 24px/24px 'Material Icons';
+    border-radius: $border-radius-small;
+    color: $brand-primary;
+    //background: $brand-primary;
+    //box-shadow: $box-shadow-key-small;
+    cursor: pointer;
+
+    &:before {
+      content: '\e313';
+    }
+  }
+
+  .resp-accordion {
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+    padding-left: 53px;
+    font-family: $font-family-base;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    color: $gray-dark;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    border: 1px solid $gray-lighter;
+    > .btn {
+      display: block;
+      text-transform: none;
+      text-align: left;
+    }
+    &:hover {
+      color: $brand-primary;
+    }
+
+    &.resp-tab-active {
+      //>.btn{
+      //color: $white-clr;
+      border-color: $gray-lighter;
+      background: $gray-lighter;
+      //}
+      &:hover {
+        color: $gray-dark;
+      }
+      .resp-arrow {
+        //color: $brand-primary;
+        //background: $white-clr;
+        //box-shadow: $box-shadow-ambient;
+        &:before {
+          content: '\e316';
+        }
+      }
+    }
+  }
+
+  .resp-arrow + .btn {
+    margin-top: 0;
+  }
+
+  .resp-tab-content {
+    display: none;
+    font-size: 15px;
+    padding-left: 53px;
+    padding-top: 6px;
+    padding-right: 15px;
+    padding-bottom: 30px;
+    background: $gray-lighter;
+  }
+
+  .resp-accordion + .resp-tab-content {
+    //margin-top: 10px;
+  }
+
+  .resp-tab-content + .resp-accordion {
+    //margin-top: 20px;
+  }
+}
+
+.bg-lighter {
+  .resp-accordion {
+    border-color: $gray-light-2;
+    &.resp-tab-active {
+      border-color: $gray-light-2;
+      background: $gray-light-2;
+    }
+  }
+  .resp-tab-content {
+    background: $gray-light-2;
+    color: $gray;
+  }
+}

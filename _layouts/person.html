@@ -1,0 +1,28 @@
+---
+layout: page
+---
+{% assign author = site.data.authors[page.author] %}
+<article class="well" itemscope itemtype="http://schema.org/Person">
+  <h1>{{ page.title }}</h1>
+  <img src="{{ site.baseurl }}/images/avatars/{{ author.avatar }}" alt="{{ author.name }}" class="offset-5" itemprop="image" />
+
+  <ul class="list-inline list-inline-3">
+    {% for item in author.socialmedia %}
+      <li><a href="{{ item.url }}" class="{{ item.class }}-square"></a></li>
+    {% endfor %}
+  </ul>
+
+  <div class="typography">
+    {% if page.subheadline %}
+      <h4 class="lead offset-2 text-justify">{{ page.subheadline }}</h4>
+    {% endif %}
+
+    {% if author.tagline %}
+      <p class="lead text-justify" itemprop="description">{{ author.tagline }}</p>
+    {% elsif page.teaser %}
+      <p class="lead text-justify" itemprop="description">{{ page.teaser }}</p>
+    {% endif %}
+
+    {{ content }}
+  </div>
+</article>

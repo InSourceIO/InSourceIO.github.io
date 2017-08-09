@@ -1,0 +1,72 @@
+{
+  "Steve": {
+    "name": "Steve Riesenberg",
+    "title": "Founder &amp; CEO",
+    "siterole": "webmaster, developer, engineer, architect, copywriter, designer, contributor",
+    "url": "/who/Steve/",
+    "avatar": "Steve.jpg",
+    "email": "steve@insource.io",
+    "website": "http://insource.io",
+    "twitter": "@sjohnr",
+    "intro": "I'm an author, developer, father, musician, and everything in between. In 2016, I founded InSource Software...",
+    "tagline": "I'm an author, developer, father, musician, and everything in between. In 2016, I founded InSource Software with the goal of making software development fun again, and to create a sustainable model for including the customer in the process. Oh, and building great software. That too...",
+    "socialmedia": [
+      {
+        "name": "GitHub",
+        "url": "http://github.com/sjohnr",
+        "class": "fa-github",
+        "title": "GitHub"
+      },
+      {
+        "name": "Twitter",
+        "url": "http://twitter.com/sjohnr",
+        "class": "fa-twitter",
+        "title": "Twitter"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/StephenRiesenberg",
+        "class": "fa-linkedin",
+        "title": "LinkedIn"
+      },
+      {
+        "name": "Google+",
+        "url": "https://plus.google.com/+StephenRiesenberg",
+        "class": "fa-google-plus",
+        "title": "Google+"
+      },
+      {
+        "name": "Facebook",
+        "url": "http://www.facebook.com/Stephen.Riesenberg",
+        "class": "fa-facebook",
+        "title": "Facebook"
+      }
+    ]
+  },
+  "Laurie": {
+    "name": "Laurie Riesenberg",
+    "title": "Designer &amp; CMO",
+    "siterole": "copywriter, designer, contributor",
+    "url": "/who/Laurie/",
+    "avatar": "Laurie.jpg",
+    "email": "laurie@insource.io",
+    "website": "http://mallowworld.wordpress.com",
+    "twitter": "@MallowWorld",
+    "intro": "I'm the graphic designer and marketing brains for the company. When not working on new logo styles and graphics...",
+    "tagline": "I'm the graphic designer and marketing brains for the company. When not working on new logo styles and graphics, I'm a homeschool teacher and mother of two, as well as a musician and avid hobbyist. I also run an online business where I design and sell printable resources to teachers, as well as digital art and photography.",
+    "socialmedia": [
+      {
+        "name": "Twitter",
+        "url": "http://twitter.com/mallowworld",
+        "class": "fa-twitter",
+        "title": "Twitter"
+      },
+      {
+        "name": "Facebook",
+        "url": "http://www.facebook.com/Laurie.Riesenberg",
+        "class": "fa-facebook",
+        "title": "Facebook"
+      }
+    ]
+  }
+}

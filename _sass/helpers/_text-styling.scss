@@ -1,0 +1,70 @@
+/*
+* @subsection   Text Styling
+*/
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-strike {
+  text-decoration: line-through;
+}
+
+.text-thin {
+  font-weight: 100;
+}
+
+.text-light {
+  font-weight: 300;
+}
+
+.text-extra-light {
+  font-weight: 200;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.text-medium {
+  font-weight: 500;
+}
+
+.text-sbold {
+  font-weight: 600;
+}
+
+.text-bold, strong {
+  font-weight: 700;
+}
+
+.text-ubold {
+  font-weight: 900;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalise {
+  text-transform: capitalize;
+}
+
+.text-normal {
+  text-transform: none;
+}
+
+.txt-white {
+  color: $white-clr;
+}
+
+.txt-dark {
+  color: $gray-dark;
+}
+.txt-info-2 {
+  color:$brand-info-2;
+}

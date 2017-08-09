@@ -1,0 +1,45 @@
+[
+  {
+    "name": "GitHub",
+    "url": "http://github.com/InSourceSoftware",
+    "class": "fa-github",
+    "title": "GitHub"
+  },
+  {
+    "name": "Twitter",
+    "url": "http://twitter.com/InSourceOmaha",
+    "class": "fa-twitter",
+    "title": "Twitter"
+  },
+  {
+    "name": "LinkedIn",
+    "url": "https://www.linkedin.com/company/insource-software",
+    "class": "fa-linkedin",
+    "title": "LinkedIn"
+  },
+  {
+    "name": "Google+",
+    "url": "https://plus.google.com/u/0/b/116388734123404805483/116388734123404805483",
+    "class": "fa-google-plus",
+    "title": "Google+"
+  },
+  {
+    "name": "Facebook",
+    "url": "http://www.facebook.com/InSourceSoftware",
+    "class": "fa-facebook",
+    "title": "Facebook"
+  },
+  {
+    "name": "YouTube",
+    "url": "https://www.youtube.com/channel/UCV28mr5gKHS2JDM1_ZoAmFA",
+    "class": "fa-youtube",
+    "title": "YouTube"
+  },
+  {
+    "name": "Instagram",
+    "url": "http://instagram.com/InSourceSoftware",
+    "class": "fa-instagram",
+    "title": "Instagram",
+    "square": false
+  }
+]

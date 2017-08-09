@@ -1,0 +1,192 @@
+---
+layout: minimal
+---
+{% assign author = site.data.authors[page.author] %}
+{% assign num_comments = site.data.comments[page.slug] | size %}
+<section class="text-center text-md-left offset-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 section-border">
+        <article class="well" itemscope itemtype="http://schema.org/BlogPosting">
+          <h1>{{ page.title }}</h1>
+
+          <div class="blog-info">
+            <div class="pull-md-left">
+              <time datetime="{{ page.date | date_to_xmlschema }}" class="meta material-icons-schedule" itemprop="datePublished">{{ page.date | date: '%b %-d, %Y' }}</time>
+              <a href="{{ author.url }}" class="badge material-icons-person_outline font-secondary" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <span itemprop="name">{{ page.author }}</span>
+              </a>
+              <span class="tags">
+                <a class="badge material-icons-local_offer"></a>
+                {% for cat in page.categories %}
+                  <a href="{{ site.baseurl }}/blog/{{ cat }}/" class="post-tag round-xl small">{{ cat }}</a>
+                {% endfor %}
+              </span>
+              {% if page.comments != 'false' %}
+                <a href="#comments" class="badge material-icons-chat_bubble_outline font-secondary">{{ num_comments }} comment{% if num_comments != 1 %}s{% endif %}</a>
+              {% endif %}
+            </div>
+          </div>
+
+          {% if page.image %}
+            <img src="{{ site.baseurl }}/images/{{ page.image.title }}" alt="{{ page.image.caption }}" class="offset-5" itemprop="image" />
+          {% endif %}
+
+          <div class="typography">
+            {% if page.subheadline %}
+              <h4 class="lead offset-2 text-justify">{{ page.subheadline }}</h4>
+            {% endif %}
+
+            {% if page.teaser %}
+              <p class="lead text-justify" itemprop="description">{{ page.teaser }}</p>
+            {% endif %}
+
+            {{ content }}
+          </div>
+        </article>
+      </div>
+      <div class="col-xs-12 section-border">
+        <div class="blog-info blog-info-inset text-center text-lg-left">
+          <div class="pull-lg-left">
+            <span class="tags wrap-normal">
+              <a class="badge material-icons-local_offer"></a>
+              {% for tag in page.tags %}
+                <span class="post-tag round-xl small">{{ tag }}</span>
+              {% endfor %}
+            </span>
+          </div>
+          <div class="pull-lg-right inline-block"><span class="small font-secondary text-light-clr text-uppercase">Share this</span>
+            <ul class="list-inline list-inline-4 pull-md-right">
+              <li><a href="http://www.facebook.com/share.php?u={{ page.url | prepend: site.baseurl | prepend: site.url | url_encode }}" target="_blank" class="fa-facebook text-info"></a></li>
+              <li><a href="https://www.pinterest.com/?url={{ page.url | prepend: site.baseurl | prepend: site.url | url_encode }}&media={{ page.image.title | prepend: '/images/' | prepend: site.baseurl | prepend: site.url | url_encode }}" target="_blank" class="fa-pinterest-p text-danger"></a></li>
+              <li><a href="https://twitter.com/share?text={{ page.title | url_encode }}&via=InSourceOmaha" target="_blank" class="fa-twitter txt-info-2"></a></li>
+              <li><a href="https://www.linkedin.com/cws/share?url={{ page.url | prepend: site.baseurl | prepend: site.url | url_encode }}" target="_blank" class="fa-linkedin text-info"></a></li>
+              <li><a href="https://plus.google.com/share?url={{ page.url | prepend: site.baseurl | prepend: site.url | url_encode }}" target="_blank" class="fa-google-plus text-danger"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 text-center text-md-left post-links offset-5">
+        {% if page.previous.url %}
+          <a href="{{ site.baseurl }}{{ page.previous.url }}" class="btn-link pull-md-left fa-angle-left text-uppercase text-bold">{{ page.previous.title }}</a>
+        {% endif %}
+        <br class="hidden-lg hidden-md">
+        {% if page.next.url %}
+          <a href="{{ site.baseurl }}{{ page.next.url }}" class="btn-link pull-md-right fa-angle-right text-uppercase text-bold">{{ page.next.title }}</a>
+        {% endif %}
+      </div>
+      <div class="col-xs-12 text-center text-md-left offset-2 section-border">
+        <div class="post-autor col-inset-2">
+          <h6>Posted by <span class="text-primary"><a href="{{ author.url }}">{{ author.name }}</a></span></h6>
+          <div class="box-md offset-5">
+            <div class="box__left">
+              <img src="{{ site.baseurl }}/images/avatars/{{ author.avatar }}" alt="{{ author.name }}" class="img-circle full-border" height="170" width="170" />
+            </div>
+            <div class="box__body box__middle">
+              <p class="big">{{ author.tagline }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% if page.related and page.collection == 'posts' %}
+        <div class="col-xs-12 text-center text-md-left well">
+          <h5>Related Posts:</h5>
+          <div class="row no-offset clearleft-2">
+            {% for item in page.related %}
+              {% for post in site.posts %}
+                {% if item == post.url %}
+                  <div class="col-sm-6 col-md-4">
+                    {% include _post.html thumbnail=true %}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+      {% elsif page.related and page.collection == 'articles' %}
+        <div class="col-xs-12 text-center text-md-left well">
+          <h5>Related Articles:</h5>
+          <div class="row no-offset clearleft-2">
+            {% for item in page.related %}
+              {% for post in site.articles %}
+                {% if item == post.url %}
+                  <div class="col-sm-6 col-md-4">
+                    {% include _post.html thumbnail=true %}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% if page.comments != 'false' %}
+  {% if num_comments > 0 %}
+    {% assign comments = site.data.comments[page.slug] | sort %}
+    <section id="comments" class="text-center text-md-left offset-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 text-center text-md-left section-border well">
+            <h5>{{ comments | size }} Comment{% if num_comments != 1 %}s{% endif %}</h5>
+            <div class="row comments">
+              {% for _comment in comments %}
+                {% assign comment = _comment[1] %}
+                <div class="col-xs-12">
+                  <blockquote class="box-sm">
+                    <div class="box__left text-center">
+                      <img src="https://www.gravatar.com/avatar/{{ comment.email }}?d={{ '/images/no-photo.png' | prepend: site.baseurl | prepend: site.url | url_encode }}" alt="{{ comment.name }}" class="img-circle full-border">
+                    </div>
+                    <div class="box__body box__middle btn-shadow round-small">
+                      <h6 class="text-uppercase">{{ comment.name }}</h6>
+                      <time datetime="{{ comment.date | date_to_xmlschema }}" class="meta">{{ comment.date | date: "%B %e, %Y" }} at {{ comment.date | date: "%l:%M %P" }}</time>
+                      <p class="big">{{ comment.message }}</p>
+                      <!--<a href="#" class="follow"></a>-->
+                    </div>
+                  </blockquote>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+  <section class="well well-inset-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h5 class="text-center text-md-left">Leave a Comment</h5>
+          <form class="row label-insets rd-mailform" method="post" action="https://api.staticman.net/v2/entry/InSourceSoftware/InSourceSoftware.github.io/master/comments">
+            <input type="hidden" name="options[title]" value="{{ page.title }}" />
+            <input type="hidden" name="options[slug]" value="{{ page.slug }}" />
+            <input type="hidden" name="fields[other]" value="" placeholder="Other" />
+            <div class="form-group col-sm-4">
+              <label for="cf-name" class="font-secondary text-uppercase form-label rd-input-label">First Name</label>
+              <input type="text" id="cf-name" name="fields[name]" data-constraints="@NotEmpty @LettersOnly" placeholder="John" class="form-control" />
+            </div>
+            <div class="form-group col-sm-4">
+              <label for="cf-email" class="font-secondary text-uppercase form-label rd-input-label">E-mail</label>
+              <input type="email" id="cf-email" name="fields[email]" data-constraints="@NotEmpty @Email" placeholder="example@domain.com" class="form-control" />
+            </div>
+            <div class="form-group col-sm-4">
+              <label for="cf-url" class="font-secondary text-uppercase form-label rd-input-label">Website</label>
+              <input type="text" id="cf-url" name="fields[url]" placeholder="http://www.domain.com" class="form-control" />
+            </div>
+            <div class="form-group col-sm-12">
+              <label for="cf-message" class="font-secondary text-uppercase form-label rd-input-label">Your Message</label>
+              <textarea id="cf-message" name="fields[message]" data-constraints="@NotEmpty" rows="3" placeholder="Write your comment here" class="form-control"></textarea>
+            </div>
+            <div class="col-xs-12 text-center">
+              <button type="submit" class="btn btn-primary btn-xs round-xl form-el-offset-1">Submit comment</button>
+              <div class="mfInfo"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}

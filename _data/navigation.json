@@ -1,0 +1,137 @@
+[
+  {
+    "title": "Who We Are",
+    "url": "/who/"
+  },
+  {
+    "title": "Why We Exist",
+    "url": "/why/"
+  },
+  {
+    "title": "What We Do",
+    "url": "/what/",
+    "class": "dropdown-megamenu",
+    "__megamenu": [
+      {
+        "title": "Section 1",
+        "dropdown": [
+          {
+            "title": "Item 1",
+            "url": "/services/item1"
+          },
+          {
+            "title": "Item 2",
+            "url": "/services/item2"
+          },
+          {
+            "title": "Item 3",
+            "url": "/services/item3"
+          },
+          {
+            "title": "Item 4",
+            "url": "/services/item4"
+          }
+        ]
+      },
+      {
+        "title": "Section 2",
+        "dropdown": [
+          {
+            "title": "Item 1",
+            "url": "/services/item1"
+          },
+          {
+            "title": "Item 2",
+            "url": "/services/item2"
+          },
+          {
+            "title": "Item 3",
+            "url": "/services/item3"
+          },
+          {
+            "title": "Item 4",
+            "url": "/services/item4"
+          },
+          {
+            "title": "Item 5",
+            "url": "/services/item5"
+          },
+          {
+            "title": "Item 6",
+            "url": "/services/item6"
+          }
+        ]
+      },
+      {
+        "title": "Section 3",
+        "dropdown": [
+          {
+            "title": "Item 1",
+            "url": "/services/item1"
+          },
+          {
+            "title": "Item 2",
+            "url": "/services/item2"
+          },
+          {
+            "title": "Item 3",
+            "url": "/services/item3"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "__title": "About",
+    "url": "/about/",
+    "dropdown": [
+      {
+        "title": "Team",
+        "url": "/about/team/"
+      },
+      {
+        "title": "Expertise",
+        "url": "/about/expertise/"
+      },
+      {
+        "title": "Technologies",
+        "url": "/about/technologies/"
+      },
+      {
+        "title": "Projects",
+        "url": "/about/projects/"
+      },
+      {
+        "title": "Partners",
+        "url": "/about/partners/"
+      }
+    ],
+    "enabled": "false"
+  },
+  {
+    "__title": "Services",
+    "url": "/services/"
+  },
+  {
+    "title": "What We Say",
+    "url": "/blog/",
+    "dropdown": [
+      {
+        "title": "Posts",
+        "url": "/blog/posts/"
+      },
+      {
+        "title": "Articles",
+        "url": "/articles/"
+      },
+      {
+        "title": "Archive",
+        "url": "/blog/archive/"
+      }
+    ]
+  },
+  {
+    "__title": "Contact",
+    "url": "/contact/"
+  }
+]

@@ -1,0 +1,12 @@
+---
+layout: default
+---
+{% unless page.breadcrumb == false %}
+  <section class="section-border text-center text-md-left">
+    <div class="container">
+      {% include breadcrumb.html %}
+    </div>
+  </section>
+{% endunless %}
+
+{{ content }}

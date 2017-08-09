@@ -1,0 +1,587 @@
+//
+// Typography
+// --------------------------------------------------
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-color;
+  margin: 0;
+
+  small,
+  .small {
+    font-weight: normal;
+    line-height: 1;
+    color: $headings-small-color;
+  }
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+
+  small,
+  .small {
+    font-size: 65%;
+  }
+}
+
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+
+  small,
+  .small {
+    font-size: 75%;
+  }
+}
+
+h1, .h1 {
+  font-size: 28px;
+  //letter-spacing: 0.02em;
+  color: #34495e;
+  @media (min-width: $screen-md) {
+    font-size: $font-size-h1;
+    &.h1-variant-2{
+      font-size: 42px;
+      line-height: (50/42);
+    }
+  }
+}
+
+h2, .h2 {
+  font-size: 26px;
+  @media (min-width: $screen-md) {
+    font-size: $font-size-h2;
+  }
+}
+
+h3, .h3 {
+  font-size: 24px;
+  @media (min-width: $screen-md) {
+    font-size: $font-size-h3;
+  }
+  small {
+    font-size: 14px;
+    color: $gray-light;
+    letter-spacing: 0.06em;
+    display: block;
+  }
+}
+
+h4, .h4 {
+  font-size: 20px;
+  letter-spacing: 0.04em;
+  color:#34495e;
+  @media (min-width: $screen-md) {
+    font-size: $font-size-h4;
+  }
+}
+
+h5, .h5 {
+  font-size: 18px;
+
+  small {
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: $font-family-base;
+    margin-top: 5px;
+    color: $text-color;
+    display: block;
+  }
+
+  @media (min-width: $screen-md) {
+    font-size: $font-size-h5;
+  }
+}
+
+h6, .h6 {
+  font-size: $font-size-h6;
+  letter-spacing: 0.02em;
+  color:#34495e;
+}
+
+// Body text
+// -------------------------
+
+p {
+  margin: 0;
+}
+
+.lead {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 400;
+  &.big {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: $gray-base;
+    @media (min-width: $screen-lg) {
+      padding-left: 12%;
+      padding-right: 12%;
+    }
+    @media (max-width: 991px) {
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+}
+
+// Emphasis & misc
+// -------------------------
+
+// Ex: (12px small font / 14px base font) * 100% = about 85%
+small,
+.small {
+  font-size: $font-size-small;
+  &--mod-1{
+    font-size: 12px;
+  }
+}
+
+
+mark,
+.mark {
+  background-color: $brand-primary;
+  color: $white-clr;
+  padding: .2em;
+}
+
+// Alignment
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+// Transformation
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+// Contextual colors
+.text-muted {
+  color: $text-muted;
+}
+
+.text-base {
+  color: $text-color;
+}
+.text-dark{
+  color:$gray-dark;
+}
+.text-primary {
+  color: $brand-primary;
+}
+
+.text-success {
+  color: $brand-success;
+}
+
+.text-info {
+  color: $brand-info;
+}
+
+.text-warning {
+  color: $brand-warning;
+}
+
+.text-danger {
+  color: $brand-danger;
+}
+
+.text-white {
+  color: $white-clr
+}
+
+// Contextual backgrounds
+// For now we'll leave these alongside the text classes until v4 when we can
+// safely shift things around (per SemVer rules).
+.bg-primary {
+  // Given the contrast here, this is the only class to have its color inverted
+  // automatically.
+  //color: $white-clr;
+  background: $brand-primary;
+  .text-primary, h1 {
+    color: $white-clr;
+  }
+}
+
+.bg-success {
+  background: $brand-success;
+}
+
+.bg-info {
+  background: $brand-info;
+}
+
+.bg-warning {
+  background: $brand-warning;
+}
+
+.bg-danger {
+  background: $brand-danger;
+}
+
+.bg-dark {
+  background: $gray-dark;
+  color: $white-clr;
+}
+
+// Page header
+// -------------------------
+
+.page-header {
+  padding-bottom: (($line-height-computed / 2) - 1);
+  margin: ($line-height-computed * 2) 0 $line-height-computed;
+  border-bottom: 1px solid $page-header-border-color;
+}
+
+// Lists
+// -------------------------
+
+// Unordered and Ordered lists
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  li {
+    padding: 0;
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+    a {
+      padding: 0;
+      list-style: none;
+      margin: 0;
+    }
+  }
+}
+
+// List options
+
+// [converter] extracted from `.list-unstyled` for libsass compatibility
+@mixin list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+// [converter] extracted as `@mixin list-unstyled` for libsass compatibility
+.list-unstyled {
+  @include list-unstyled;
+  > li {
+    text-transform: uppercase;
+    color: $gray-light;
+    font-size: 14px;
+    border-top: 1px solid rgba($gray-light, .3);
+    font-family: $font-family-sec;
+    padding: 12px 5px;
+    &:last-child {
+      padding: 0;
+      //border: none;
+      .link {
+        font-weight: 700;
+        display: block;
+        padding: 12px 5px;
+        background: $brand-primary;
+        color: $white-clr;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        &:hover {
+          background: $brand-primary;
+
+        }
+      }
+    }
+  }
+}
+
+.list-unstyled-2 {
+  @include list-unstyled;
+  > li {
+    font-size: 15px;
+  }
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+  @include list-unstyled;
+  //margin-left: -5px;
+
+  > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 18px;
+    width: 40px;
+    line-height: 39px;
+    text-align: center;
+    //& + li {
+    //  border-left: 1px solid #dde2e6;
+    //}
+    &:first-child {
+      border-left: 1px solid #dde2e6;
+    }
+    &:last-child {
+      border-right: 1px solid #dde2e6;
+    }
+  }
+
+  &.list-inline-3 {
+    li {
+      color: #b9bcc1;
+      border: none;
+      padding-left: 0px;
+      padding-right: 0px;
+      width: auto;
+      a {
+        font-size: 26px;
+      }
+      & + li {
+        margin-left: 17px;
+      }
+    }
+  }
+
+}
+
+.list-inline-2 {
+  @include list-unstyled;
+  //margin-left: -5px;
+
+  > li {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #343842;
+    font-family: $font-family-sec;
+    letter-spacing: .02em;
+    & + li {
+      margin-left: 43px;
+    }
+  }
+}
+
+.list-inline.list-inline-4 {
+  display: inline-block;
+  > li {
+    border: none;
+    a {
+      font-size: 20px;
+      @include transform(scale(1));
+      display: inline-block;
+      &:hover{
+        color: $gray-darker;
+        @include transform(scale(1.3));
+      }
+    }
+    &:nth-child(6){
+      color:#f69105;
+    }
+  }
+}
+
+// Description Lists
+dl {
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+}
+
+dt,
+dd {
+  padding: 0;
+  margin: 0;
+}
+
+dt {
+}
+
+dd {
+}
+
+// Horizontal description lists
+//
+// Defaults to being stacked without any of the below styles applied, until the
+// grid breakpoint is reached (default of ~768px).
+
+.dl-horizontal {
+  dd {
+    @include clearfix; // Clear the floated `dt` if an empty `dd` is present
+  }
+
+  @media (min-width: $dl-horizontal-breakpoint) {
+    dt {
+      float: left;
+      width: ($dl-horizontal-offset - 20);
+      clear: left;
+      text-align: right;
+      @include text-overflow;
+    }
+    dd {
+      margin-left: $dl-horizontal-offset;
+    }
+  }
+}
+
+// Misc
+// -------------------------
+
+// Abbreviations and acronyms
+abbr[title],
+  // Add data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted $abbr-border-color;
+}
+
+.initialism {
+  font-size: 90%;
+  @extend .text-uppercase;
+}
+
+// Blockquotes
+blockquote {
+  margin: 0;
+  &.quote {
+    display: inline-block;
+
+    font-style: normal;
+    color: $gray;
+    font-size: $blockquote-font-size;
+    background: $gray-lighter;
+
+    padding: 17px 27px;
+
+    cite {
+      display: block;
+      color: $gray-dark;
+      font-style: normal;
+      margin-top: 35px;
+      font-family: $font-family-sec;
+      position: relative;
+      
+      @media (min-width: $screen-sm) {
+        padding-left: 57px;
+        &:before {
+          content: '';
+          position: absolute;
+          width: 35px;
+          height: 1px;
+          border-bottom: 1px solid #e1e1e1;
+          left: 8px;
+          top: 50%;
+          @include transform(translateY(-50%));
+        }
+      }
+    }
+  }
+  &.quote-2 {
+    padding-left: 15px;
+    padding-right: 15px;
+    h6 {
+      cite {
+        font-style: normal;
+      }
+    }
+    p + p {
+      margin-top: 23px;
+      line-height: 25px;
+    }
+
+    h6 + * {
+      margin-top: 4px;
+      //letter-spacing: 0.12em;
+    }
+    * + h6 {
+      margin-top: 18px;
+    }
+  }
+}
+
+// Opposite alignment of blockquote
+//
+// Heads up: `blockquote.pull-right` has been deprecated as of v3.1.0.
+.blockquote-reverse,
+blockquote.pull-right {
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid $blockquote-border-color;
+  border-left: 0;
+  text-align: right;
+
+  // Account for citation
+  footer,
+  small,
+  .small {
+    &:before {
+      content: '';
+    }
+    &:after {
+      content: '\00A0 \2014'; // nbsp, em dash
+    }
+  }
+}
+
+// Addresses
+address {
+  font-style: normal;
+  &.contact-block {
+    dl {
+      dt {
+        //letter-spacing: 0.06em;
+        color: $gray-light;
+        text-transform: uppercase;
+      }
+      dd{
+
+          color: #34495e;
+          a:hover{
+            color:$brand-primary;
+          }
+
+      }
+      dt + dd {
+        margin-top: 8px;
+      }
+      dd + dt {
+        margin-top: 35px;
+      }
+      & + * {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+

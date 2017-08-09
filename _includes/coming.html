@@ -1,0 +1,23 @@
+<section class="well-xl text-center user-info-section">
+  <div class="container">
+    <h1 class="text-uppercase text-white">Coming soon</h1>
+    <div class="col-md-8 col-md-offset-2 well well-sm">
+      <p class="text-white">
+        This page is not yet available. It will be available in approximately...
+      </p>
+      <div id="DateCountdown" data-date="2017-08-17 12:00:00" class="text-white"></div>
+    </div>
+
+    <form class="offset-1 text-white rd-mailform" method="post" action="https://script.google.com/macros/s/AKfycbxeWuqOhQDk39-lqzSjTO47p2v3kVa3BgYHTN4gf1SLMIf3mrSK/exec">
+      <input type="hidden" name="form-type" value="notify" />
+      <div class="form-group col-sm-4 col-sm-offset-3">
+        <label for="email" class="sr-only">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="example@domain.com" data-constraints="@NotEmpty @Email" class="text-white form-control bg-rgba" />
+      </div>
+      <div class="form-group col-sm-3">
+        <button type="submit" class="btn btn-primary btn-xs round-xl">Notify me</button>
+      </div>
+      <div class="mfInfo"></div>
+    </form>
+  </div>
+</section>

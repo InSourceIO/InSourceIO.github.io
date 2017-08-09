@@ -1,0 +1,25 @@
+<header class="page-header dark">
+  <div class="rd-navbar-wrap">
+    <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-hover-on="false" data-stick-up="false" data-sm-layout="rd-navbar-fullwidth" data-md-layout="rd-navbar-static">
+      {% include navbar-top-panel.html %}
+
+      <div class="rd-navbar-inner">
+        {% include navbar-panel.html %}
+
+        <div class="rd-navbar-nav-wrap">
+          {% include navbar-search.html %}
+          {% include navbar-navigation.html %}
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <section>
+    <div class="rd-parallax">
+      <div data-speed="0.6" data-type="media" data-url="{{ site.baseurl }}/images/stock/brick-wall-1920.jpg" class="rd-parallax-layer"></div>
+      <div data-speed="0.78" data-type="html" data-fade="true" class="well-parallax jumbotron text-center rd-parallax-layer">
+        {% include header-content.html %}
+      </div>
+    </div>
+  </section>
+</header>

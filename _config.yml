@@ -1,0 +1,141 @@
+# Site Settings
+
+title: 'InSource Software'
+slogan: 'Our Engineers &middot; Your Source'
+description: 'We use customer driven development, which allows us to deliver tailored solutions to real world problems through shared vision built on trust, teamwork and collaboration. Innovation and craftsmanship come standard.'
+meta: 'Experts specializing in Big Data, Search & Microservices in Java & JavaScript using Spring Boot, Elasticsearch, Hadoop, & ZeroMQ.'
+language: 'en'
+
+url: 'http://insource.io'
+baseurl: ''
+logo: 'logo.png'
+logo2: 'logo2.png'
+
+author: Steve
+email: contact@insource.io
+phone: '+1 (402) 909-1695'
+address: 'Bellevue, NE 68123'
+
+# Delete the lines you don't need
+# about 5 elements are recommended
+github_username:  InSourceSoftware
+facebook_username: InSourceSoftware
+twitter_username: InSourceOmaha
+#google_plus_username: InSourceSoftware
+google_plus_url: https://plus.google.com/u/0/b/116388734123404805483/116388734123404805483
+linkedin_username: insource-software
+instagram_username:  InSourceSoftware
+#pinterest_username: InSourceSoftware
+#stack_of_username: InSourceSoftware
+#reddit_username: InSourceSoftware
+#youtube_username: InSourceSoftware
+youtube_username: UCV28mr5gKHS2JDM1_ZoAmFA
+blog_url: '/blog/'
+
+avatar: yes
+#avatar_img_path: '/images/avatar.jpg''
+# You can link to your GitHub image. That way it will get updated
+# automatically whenever you change your GitHub profile picture
+avatar_img_path: 'https://avatars0.githubusercontent.com/u/18608462'
+
+# Jekyll Settings
+
+collections:
+#  articles:
+#    output: true
+#    permalink: /:collection/:title:output_ext
+  posts:
+    output: true
+    permalink: /blog/:categories/:title:output_ext
+
+sass:
+  sass_dir: _sass
+  style: :compressed
+
+gems:
+- jekyll-gist
+- jekyll-paginate
+paginate: 5                      # Paginates all X entries
+paginate_path: '/blog/page-:num'   # Pagination path › Important for blog page in /blog/ to work
+
+markdown: kramdown
+permalink: /:categories/:title/
+highlight: rouge
+excerpt_separator: '<!--more-->'
+
+include:
+- '.htaccess'
+exclude:
+- .sass-cache
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- README.md
+- INSTALL.md
+
+# Used › default.html front-matter and compress.html
+compress_html:
+  clippings: all
+  comments: ['<!-- ', ' -->']
+  endings: all
+  profile: false
+  ignore:
+    envs: [development]
+
+# Default Settings
+
+defaults:
+  -
+    scope:
+      path: '' 				# an empty string here means all files in the project
+      type: 'pages'
+    values:
+      show_meta: false 	# Hide metadata for all pages
+      sidebar: none
+      comments: false
+      author: Steve     # Default author for pages
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+      show_meta: true   # Show metadata for all posts
+      sidebar: none
+      comments: false
+      author: Steve     # Default author for posts
+  -
+    scope:
+      path: ''
+      type: 'articles'
+    values:
+      show_meta: true   # Show metadata for all posts
+      sidebar: none
+      comments: false
+      author: Steve     # Default author for posts
+
+
+
+# SEO settings
+
+google_author:             'https://plus.google.com/u/0/b/116388734123404805483/116388734123404805483'
+#google_site_verification:  'Vk0IOJ2jwG_qEoG7fuEXYqv0m2rLa8P778Fi_GrsgEQ'
+#bing_webmastertools_id:    '0FB4C028ABCF07C908C54386ABD2D97F'
+
+# Favicons
+
+favicon-32x32:                          'favicon-32x32.png'
+touch-icon-192x192:                     'touch-icon-192x192.png'
+apple-touch-icon-180x180-precomposed:   'apple-touch-icon-180x180-precomposed.png'
+apple-touch-icon-152x152-precomposed:   'apple-touch-icon-152x152-precomposed.png'
+apple-touch-icon-144x144-precomposed:   'apple-touch-icon-144x144-precomposed.png'
+apple-touch-icon-120x120-precomposed:   'apple-touch-icon-120x120-precomposed.png'
+apple-touch-icon-114x114-precomposed:   'apple-touch-icon-114x114-precomposed.png'
+apple-touch-icon-76x76-precomposed:     'apple-touch-icon-76x76-precomposed.png'
+apple-touch-icon-72x72-precomposed:     'apple-touch-icon-72x72-precomposed.png'
+apple-touch-icon-precomposed:           'apple-touch-icon-precomposed.png'
+msapplication_tileimage:                'msapplication_tileimage.png'               # Size 144x144
+msapplication_tilecolor:                '#fabb00'
+
+# Analytics
+
+google_analytics_tracking_id: UA-77117959-1

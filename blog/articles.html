@@ -1,0 +1,12 @@
+---
+layout: page
+title: Articles
+headline: Articles
+subheadline: Well written informative articles
+noindex: true
+---
+{% for post in site.categories.['articles'] %}
+  <div class="col-md-6">
+    {% include _post.html thumbnail=true %}
+  </div>
+{% endfor %}

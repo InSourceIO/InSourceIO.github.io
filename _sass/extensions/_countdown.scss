@@ -1,0 +1,57 @@
+/*
+* @subsection   Countdown
+*/
+
+.countdown {
+
+	&-row {
+		clear: both;
+		width: 100%;
+		padding: 0px 2px;
+		text-align: center;
+	}
+
+	&-show {
+		&1 .coundown-section{
+			width: 98%;
+		}
+
+		&2 .countdown-section {
+			width: 48%;
+		}
+
+		&3 .countdown-section {
+			width: 32.5%;
+		}
+
+		&4 .countdown-section {
+			width: 24.5%;
+		}
+
+		&5 .countdown-section {
+			width: 19.5%;
+		}
+
+		&6 .countdown-section {
+			width: 16.25%;
+		}
+
+		&7 .countdown-section {
+			width: 14%;
+		}
+	}
+
+	&-section {
+		display: block;
+		float: left;
+		text-align: center;
+	}
+
+	&-amount {
+		font-size: 200%;
+	}
+
+	&-period {
+		display: block;
+	}
+}

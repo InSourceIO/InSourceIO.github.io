@@ -1,0 +1,56 @@
+<section class="well well-sm">
+  <div class="container">
+    <div class="row flow-offset-1">
+      <div class="col-md-8 inset-sm-min bg-white">
+        <h5 class="text-center text-uppercase">Get In Touch</h5>
+        <form method="post" action="https://script.google.com/macros/s/AKfycbxeWuqOhQDk39-lqzSjTO47p2v3kVa3BgYHTN4gf1SLMIf3mrSK/exec" class="row label-insets rd-mailform">
+          <input type="hidden" name="form-type" value="contact" />
+          <div class="form-group col-sm-6">
+            <label for="first_name" class="text-uppercase font-secondary form-label">First Name</label>
+            <input type="text" id="first_name" name="first_name" data-constraints="@NotEmpty @LettersOnly" placeholder="John" class="form-control" />
+          </div>
+          <div class="form-group col-sm-6">
+            <label for="last_name" class="text-uppercase font-secondary">Last Name</label>
+            <input type="text" id="last_name" name="last_name" data-constraints="@NotEmpty @LettersOnly" placeholder="Smith" class="form-control" />
+          </div>
+          <div class="form-group col-sm-12">
+            <label for="message" class="text-uppercase font-secondary">Your Message</label>
+            <textarea id="message" name="message" data-constraints="@NotEmpty" rows="3" placeholder="Write your message here" class="form-control"></textarea>
+          </div>
+          <div class="form-group col-sm-6">
+            <label for="email" class="text-uppercase font-secondary">E-mail</label>
+            <input type="text" id="email" name="email" data-constraints="@NotEmpty @Email" placeholder="example@domain.com" class="form-control" />
+          </div>
+          <div class="col-sm-6">
+            <button type="submit" class="btn btn-primary btn-xs round-xl btn-block form-el-offset-1">Send Message</button>
+            <div class="mfInfo"></div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-md-4 text-center text-md-left">
+        <address class="contact-block inset-sm-min-2 bg-white">
+          <dl>
+            <dt class="h6">Address</dt>
+            <dd>{{ site.address }}</dd>
+            <dt class="h6">Website</dt>
+            <dd><a href="{{ site.url }}">{{ site.url }}</a></dd>
+            <dt class="h6">Phone</dt>
+            <dd><a href="callto:{{ site.phone }}">{{ site.phone }}</a></dd>
+            <dt class="h6">E-mail</dt>
+            <dd><a href="mailto:{{ site.email }}">{{ site.email }}</a></dd>
+          </dl>
+          <ul class="list-inline list-inline-3">
+            {% for social_item in site.data.socialmedia %}
+              {% if social_item.square == false %}
+                <li><a href="{{ social_item.url }}" target="_blank" class="{{ social_item.class }}" title="{{ social_item.title }}"></a></li>
+              {% else %}
+                <li><a href="{{ social_item.url }}" target="_blank" class="{{ social_item.class }}-square" title="{{ social_item.title }}"></a></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </address>
+      </div>
+    </div>
+  </div>
+</section>
