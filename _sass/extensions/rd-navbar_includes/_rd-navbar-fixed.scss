@@ -31,10 +31,10 @@ html.rd-navbar--has-fixed {
       font-size: 20px;
       line-height: $navbar-fixed-line-height;
       img {
-        width: 85%;
-        @media (min-width: $screen-xs-min) {
-          width: 100%;
-        }
+        //width: 85%;
+        //@media (min-width: $screen-xs-min) {
+        //  width: 100%;
+        //}
       }
     }
 
@@ -109,16 +109,16 @@ html.rd-navbar--has-fixed {
         opacity: 1;
         visibility: visible;
         position: fixed;
-        right: 25px;
-        top: 91px;
+        right: 94px;
+        top: 61px;
         padding: 0;
         border: none;
         z-index: 21;
       }
     }
     a.fa-phone.active {
-      top: 121px;
-      right: 74px;
+      top: 91px;
+      right: 114px;
     }
     .list-inline {
       text-align: left;
@@ -130,8 +130,8 @@ html.rd-navbar--has-fixed {
       position: fixed;
       right: 0;
       top: 56px;
-      width: 233px;
-      padding-top: 98px;
+      width: 275px;
+      padding-top: 68px;
       padding-bottom: 15px;
       box-shadow: $box-shadow-ambient, $box-shadow-key-light;
       li {

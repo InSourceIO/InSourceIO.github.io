@@ -171,6 +171,11 @@ $navbar-collapse-toggle-preset: "collapse-preset-1";
       color: $navbar-default-brand-color;
     }
 
+    img {
+      height: 37px;
+      width: 180px;
+    }
+
     @media (min-width: $screen-sm) {
 
     }
