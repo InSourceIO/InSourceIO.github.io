@@ -165,7 +165,6 @@ layout: minimal
             <input type="hidden" name="options[slug]" value="{{ page.slug }}" />
             <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}" />
             <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}" />
-            <input type="hidden" name="fields[other]" value="" placeholder="Other" />
             <div class="form-group col-sm-4">
               <label for="cf-name" class="font-secondary text-uppercase form-label rd-input-label">First Name</label>
               <input type="text" id="cf-name" name="fields[name]" data-constraints="@NotEmpty @LettersOnly" placeholder="John" class="form-control" />
@@ -183,10 +182,13 @@ layout: minimal
               <textarea id="cf-message" name="fields[message]" data-constraints="@NotEmpty" rows="3" placeholder="Write your comment here" class="form-control"></textarea>
             </div>
             <div class="col-xs-12 text-center">
-              <button type="button" class="btn btn-primary btn-xs round-xl form-el-offset-1" onclick="onReCaptchaClick()">Submit comment</button>
+              {% if page.reCaptcha %}
+                <button type="button" class="btn btn-primary btn-xs round-xl form-el-offset-1 g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}" data-callback="onReCaptchaSuccess" data-badge="bottomleft">Submit comment</button>
+              {% else %}
+                <button type="submit" class="btn btn-primary btn-xs round-xl form-el-offset-1">Submit comment</button>
+              {% endif %}
               <div class="mfInfo"></div>
             </div>
-            <div class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}" data-callback="onReCaptchaSuccess" data-badge="bottomleft" data-size="invisible"></div>
           </form>
         </div>
       </div>

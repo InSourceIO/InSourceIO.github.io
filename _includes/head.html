@@ -78,10 +78,6 @@
     function onReCaptchaSuccess(token) {
       $("#rd-comments-form").submit();
     }
-
-    function onReCaptchaClick() {
-      grecaptcha.execute();
-    }
   </script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   {% endif %}
