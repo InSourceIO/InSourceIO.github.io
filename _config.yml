@@ -101,7 +101,8 @@ defaults:
     values:
       show_meta: true   # Show metadata for all posts
       sidebar: none
-      comments: false
+      comments: true
+      reCaptcha: true
       author: Steve     # Default author for posts
   -
     scope:
@@ -110,7 +111,8 @@ defaults:
     values:
       show_meta: true   # Show metadata for all posts
       sidebar: none
-      comments: false
+      comments: true
+      reCaptcha: true
       author: Steve     # Default author for posts
 
 
@@ -139,3 +141,8 @@ msapplication_tilecolor:                '#fabb00'
 # Analytics
 
 google_analytics_tracking_id: UA-77117959-1
+
+# reCaptcha
+reCaptcha:
+  siteKey: "6LfThCwUAAAAAIMCW6C-Ra191E--xvcGoFOQwg9s"
+  secret: "d2C0ubOLUhfiOiRXwEQ4kJKGbCSPEBMJzOq0W4eu2UZhf2CPdFS6meA+zygFfFzhF0wJXnCW4AiUCMH7HLMsV2oOwJxDldrAtL55TF4L5hDhijiix+8l8t4MwhsX9vpSnbboWDnHGVhO80ZGICvUfqpirTfo5wPHjUgHJKlBFwo="
