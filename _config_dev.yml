@@ -26,3 +26,8 @@ sass:
 
 # Disable when not in production
 google_analytics_tracking_id: ''
+
+# Google App Scripts
+#google:
+#  scripts:
+#    url: "https://script.google.com/macros/s/AKfycbwGW3TbW-1kMRDcjuCcnwwUHDbCigUa0hgqEsnsQ3m4/dev"

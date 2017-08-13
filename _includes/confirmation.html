@@ -1,0 +1,17 @@
+<section class="well-xl text-center user-info-section">
+  <div class="container">
+    <h1 class="text-uppercase text-white">Thanks<small class="text-white text-bold">You're confirmed</small></h1>
+
+    <form id="confirmation-form" class="offset-1 text-white rd-mailform rd-confirmation-form" method="post" action="{{ site.google.scripts.url }}">
+      <input type="hidden" name="form-type" value="confirm" />
+      <div class="form-group col-sm-4 col-sm-offset-3">
+        <label for="email" class="sr-only">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="example@domain.com" data-constraints="@NotEmpty @Email" class="text-white form-control bg-rgba hidden" />
+      </div>
+      <div class="form-group col-sm-3">
+        <button type="submit" class="btn btn-primary btn-xs round-xl hidden">Confirm</button>
+      </div>
+      <div class="mfInfo"></div>
+    </form>
+  </div>
+</section>

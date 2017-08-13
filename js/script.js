@@ -1220,6 +1220,13 @@ $('.nav-tabs a').click(function (e) {
                     'MF254': 'Something went wrong with PHPMailer!',
                     'MF255': 'There was an error submitting the form!'
                 });
+
+                // Email confirmation and unsubscribe functionality
+                if (o.hasClass('rd-confirmation-form') || o.hasClass('rd-unsubscribe-form')) {
+                    var email = decodeURI(location.search.replace(/^\?.*email=([^&]+)/, "$1"));
+                    $("#email").val(email);
+                    o.submit();
+                }
             }
         });
     }

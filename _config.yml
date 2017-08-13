@@ -146,3 +146,8 @@ google_analytics_tracking_id: UA-77117959-1
 reCaptcha:
   siteKey: "6LfThCwUAAAAAIMCW6C-Ra191E--xvcGoFOQwg9s"
   secret: "d2C0ubOLUhfiOiRXwEQ4kJKGbCSPEBMJzOq0W4eu2UZhf2CPdFS6meA+zygFfFzhF0wJXnCW4AiUCMH7HLMsV2oOwJxDldrAtL55TF4L5hDhijiix+8l8t4MwhsX9vpSnbboWDnHGVhO80ZGICvUfqpirTfo5wPHjUgHJKlBFwo="
+
+# Google App Scripts
+google:
+  scripts:
+    url: "https://script.google.com/macros/s/AKfycbxeWuqOhQDk39-lqzSjTO47p2v3kVa3BgYHTN4gf1SLMIf3mrSK/exec"
