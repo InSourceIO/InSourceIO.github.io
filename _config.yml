@@ -147,7 +147,7 @@ prose:
       - name: teaser
         field:
           element: "text"
-          label: "Subheadline"
+          label: "Teaser"
           help: "Brief introduction to the post, seen below the subheadline on index pages."
           placeholder: "This week in the news, we learned..."
       - name: "categories"
