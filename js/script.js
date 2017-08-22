@@ -932,13 +932,13 @@ $('.nav-tabs a').click(function (e) {
  */
 ;
 (function ($) {
-    var o = $('.questions');
-    if (o.length) {
-        include('/js/scrollTo.js');
-        $(document).ready(function () {
-            o.scrollTo({});
-        });
-    }
+  if ($("html").hasClass("scrollto")) {
+    include('/js/scrollTo.js');
+
+    $(document).ready(function () {
+        $('.page').scrollTo();
+    });
+  }
 })($);
 
 
