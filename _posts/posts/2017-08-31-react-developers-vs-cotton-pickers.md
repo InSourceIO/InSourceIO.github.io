@@ -7,8 +7,9 @@ subheadline: Opinion Piece
 teaser: >-
   React makes developers cotton pickers? Caution: You are entering the land of
   biases.
-image/thumb: stock/conifers-1920-t.jpg
-image/title: stock/conifers-1920.jpg
+image:
+  thumb: stock/conifers-1920-t.jpg
+  title: stock/conifers-1920.jpg
 ---
 ## Component based cotton picking?
 
