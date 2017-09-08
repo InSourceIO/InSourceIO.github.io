@@ -1,17 +1,21 @@
 ---
 layout: post
-categories: post
-published: false
+categories:
+  - posts
+tags:
+  - opinion
+  - rant
 title: React developers vs. cotton pickers
 subheadline: Opinion Piece
 teaser: >-
-  React makes developers cotton pickers? Caution: You are entering the land of
-  biases.
+  React makes developers cotton pickers?
 image:
-  thumb: stock/conifers-1920-t.jpg
-  title: stock/conifers-1920.jpg
+  thumb: posts/react-t.png
+  title: posts/react.png
 ---
 ## Component based cotton picking?
+
+<p class="big text-warning">Caution: You are entering the land of biases.</p>
 
 According to [this article](https://hackernoon.com/react-and-the-mythical-man-month-5ac12ba91f34), react is the framework that brings the mythical man month to life.
 
