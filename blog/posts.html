@@ -5,8 +5,15 @@ headline: Posts
 subheadline: Hear from our engineers
 noindex: true
 ---
-{% for post in site.categories.['posts'] %}
-  <div class="col-md-6">
-    {% include _post.html thumbnail=true %}
-  </div>
-{% endfor %}
+<div class="row">
+  {% for post in site.categories.['posts'] %}
+    {% assign x = forloop.index | modulo: 2 %}
+    <div class="col-md-6">
+      {% include _post.html thumbnail=true %}
+    </div>
+    {% if x == 0 and forloop.index < forloop.length %}
+</div>
+<div class="row">
+    {% endif %}
+  {% endfor %}
+</div>
