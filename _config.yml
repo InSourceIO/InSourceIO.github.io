@@ -172,3 +172,18 @@ prose:
           label: "Post thumbnail"
           help: "Image is relative to /images/"
           placeholder: "stock/code-1920-t.jpg"
+
+podcast:
+  url: http://insource.io/podcast/
+  album_art: in_square.png
+  title: Get In Source
+  owner: Steve Riesenberg
+  email: steve@insource.io
+  category: Technology
+  subcategory_one: Software How-To
+  subcategory_two: Software Engineering
+  explicit: "no"
+  author: Steve Riesenberg
+  description: Your inside source for software development, including the latest technologies, frameworks, and languages. Are you in source? Hosted by Steve Riesenberg.
+  summary: Your inside source for software development, including the latest technologies, frameworks, and languages. Are you in source? Hosted by Steve Riesenberg.
+  subtitle: Your inside source for software development, including the latest technologies, frameworks, and languages. Are you in source? Hosted by Steve Riesenberg.
