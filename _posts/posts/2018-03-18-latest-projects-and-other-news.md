@@ -9,10 +9,12 @@ tags:
   - google
   - mobile app
   - development
+related:
+  - /articles/google-cloud-platform-part-1.html
 image:
     title: stock/finger-1920.jpg
     thumb: stock/finger-1920-t.jpg
-    homepage: finger/feet-1920.jpg
+    homepage: finger/finger-1920.jpg
 ---
 
 ## Latest Projects
