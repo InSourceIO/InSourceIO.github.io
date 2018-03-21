@@ -17,7 +17,7 @@ image:
     homepage: finger/google-phone-1920.jpg
 ---
 
-## ~&gt; ./start --with-args
+## ~&gt; ./start --debug --with-args -Xenv:dev
 
 **The Hook:** I want to deploy a secure Spring Boot app with a Google Cloud SQL connection to the App Engine Standard environment.
 
@@ -36,9 +36,9 @@ This was difficult for several reasons. Here's the short list:
 
 I assumed App Engine Flexible environment was the way to go, as it's newer, the docs are better, the examples are more relevant, and the setup seemed easier. It also uses Docker, so I figured this seems like the easy way to get to that utopia state of the same app deployed everywhere.
 
-What I failed to realize is that Flexible environment is ridiculously expensive, and not designed for the same use cases. In fact, most of the time, you don't want to use Flexible environment. That being said, it is vastly superior in almost every way. Apps work the Spring Boot way inside the Docker containers that Google builds. Configuration and setup are vastly simplified, and use yaml files instead of XML deployment descriptors (remember that archaic concept???). Most of Google's services just work out of the box. Etc.
+What I failed to realize is that Flexible environment is ridiculously expensive, has crazy slow deployments, and is not designed for the same use cases. In fact, most of the time, you don't want to use Flexible environment. That being said, it is vastly superior in almost every way. Apps work the Spring Boot way inside the Docker containers that Google builds. Configuration and setup are vastly simplified, and use yaml files instead of XML deployment descriptors (remember that archaic concept???). Most of Google's services just work out of the box. Etc.
 
-But Flexible environment is a sledgehammer for the problem of driving a tiny stud into the vast wasteland of a roof that is my budget-conscious project. I really need a @$%#!& nail gun. That's what App Engine Standard is. It just isn't my favorite brand, e.g. it sucks.
+But Flexible environment is a sledgehammer for the problem of driving a tiny stud into the sparse wasteland of a roof that is my budget-conscious project. I really need a @$%#!& nail gun. That's what App Engine Standard is. It just isn't my favorite brand. On account of it sucks.
 
 ## ~&gt; cat output.dump | grep ERROR | more
 
@@ -146,11 +146,6 @@ Notice the environment variable. This was necessary to allow a local development
 `src/main/java/com/example/java/gettingstarted/HelloworldApplication.java`
 
 ```java
-package com.example.java.gettingstarted;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
 @SpringBootApplication
 public class HelloworldApplication {
   public static void main(String[] args) {
@@ -178,7 +173,7 @@ dependencies {
 
 While I won't delve into the details of why this special piece is needed for Cloud SQL, suffice it to say this handles connecting correctly in a Google Cloud environment.
 
-With this basic app in place (and whatever code you want to do databas-ey things, which I trust you can figure out on your own), you're good to go in App Engine Flexible. The app is secure and can connect to a cloud database, and /_ah requests made by Google to monitor health work fine. At least, so I thought.
+With this basic app in place (and whatever code you want to do databas-ey things, which I trust you can figure out on your own), you're good to go in App Engine Flexible. The app is secure and can connect to a cloud database, and `/_ah` requests made by Google to monitor health work fine. So it would seem.
 
 ## ~&gt; cat output.dump | grep SEVERE > /dev/null
 
@@ -260,11 +255,47 @@ spring:
 
 The theory is that the `CloudSqlJdbcInfoProvider` actually configures the two commented out settings. What looks to happen is that the `driverClassName` actually gets set to `com.mysql.jdbc.GoogleDriver`, which I don't even know where that comes from. It isn't on the classpath. It's just a mystery. I suspect this is actually the magic, which could make this starter dependency optional at best, though it could have other uses, so your mileage may vary.
 
+Now, there's one last issue with App Engine Standard. Remember the config for Spring Boot from earlier, with the comment about innocuous settings fooling you into believing things that aren't true? Yeah... About that. So the `management` section does not seem to apply in the Standard environment. Possibly because of the war file deployment, additional Spring Boot features aren't available, feedback welcome on what causes it. But suffice it to say, the `/_ah` requests made by Google fail. Why? Because security.
+
+So you'll need to add a couple of unsecured endpoints that can respond to the App Engine Standard health requests. These are `/_ah/start` and `/_ah/stop`.
+
+```java
+@RestController
+public class HealthController {
+  @GetMapping("/_ah/start")
+  @PreAuthorize("hasRole('ANONYMOUS')")
+  public String start() {
+    return "OK";
+  }
+
+  @GetMapping("/_ah/stop")
+  @PreAuthorize("hasRole('ANONYMOUS')")
+  public String stop() {
+    return "OK";
+  }
+}
+```
+
+You will want to add these to your unsecured routes as well.
+
+```java
+@Configuration
+public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
+  @Override
+  public void configure(HttpSecurity http) {
+    http
+      .authorizeRequests()
+      .antMatchers("/_ah/*")
+      .permitAll();
+  }
+}
+```
+
 This works in App Engine Standard. FINALLY!!!
 
 Now, there are a few nasty problems left to deal with. I'll save those for next time.
 
-Hint: Try running this pile of mess from your IDE. Double Hint: You can't!!!
+Hint: Try running this pile of mess from your IDE _after_ converting to App Engine Standard. Double Hint: You can't!!!
 
 [1]: https://github.com/spring-cloud/spring-cloud-gcp/tree/master/spring-cloud-gcp-starters/spring-cloud-gcp-starter-sql-mysql
 [2]: https://cloud.google.com/community/tutorials/run-spring-petclinic-on-app-engine-cloudsql
