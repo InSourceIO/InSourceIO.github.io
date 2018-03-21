@@ -108,7 +108,7 @@ layout: minimal
           <h5>Related Articles:</h5>
           <div class="row no-offset clearleft-2">
             {% for item in page.related %}
-              {% for post in site.articles %}
+              {% for post in site.posts %}
                 {% if item == post.url %}
                   <div class="col-sm-6 col-md-4">
                     {% include _post.html thumbnail=true %}

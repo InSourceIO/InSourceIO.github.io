@@ -204,7 +204,7 @@ Then, depending on your build tool (I use Gradle), you may need to make changes 
 
 The problem is that deploying to Standard using the config that worked on Flexible, I can't connect to a Cloud SQL datasource. My app fails to deploy and start up successfully. Something is missing. And attempting to figure it out via Google was not working.
 
-Somehow, at the end of it all (after nearly a month of procrastinating because this problem was so frustrating to work out), I found the [spring-cloud-gcp project][6]. After looking at the source code, I think I've worked out the missing piece, but it's still a theory. However, the simple fix was to add a starter from this project to my classpath, which effectively adds `spring-cloud-gcp-autoconfigure`.jar containing an implementation or two of `CloudSqlJdbcInfoProvider`, whatever that is.
+Somehow, at the end of it all (after nearly a month of procrastinating because this problem was so frustrating to work out), I found the [spring-cloud-gcp project][6]. After looking at the source code, I think I've worked out the missing piece, but it's still a theory. However, the simple fix was to add a starter from this project to my classpath, which effectively adds `spring-cloud-gcp-autoconfigure.jar` containing an implementation or two of `CloudSqlJdbcInfoProvider`, whatever that is.
 
 I added the following to my Gradle build:
 
