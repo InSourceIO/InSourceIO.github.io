@@ -88,24 +88,9 @@ layout: minimal
           </div>
         </div>
       </div>
-      {% if page.related and page.collection == 'posts' %}
+      {% if page.related %}
         <div class="col-xs-12 text-center text-md-left well">
           <h5>Related Posts:</h5>
-          <div class="row no-offset clearleft-2">
-            {% for item in page.related %}
-              {% for post in site.posts %}
-                {% if item == post.url %}
-                  <div class="col-sm-6 col-md-4">
-                    {% include _post.html thumbnail=true %}
-                  </div>
-                {% endif %}
-              {% endfor %}
-            {% endfor %}
-          </div>
-        </div>
-      {% elsif page.related and page.collection == 'articles' %}
-        <div class="col-xs-12 text-center text-md-left well">
-          <h5>Related Articles:</h5>
           <div class="row no-offset clearleft-2">
             {% for item in page.related %}
               {% for post in site.posts %}
