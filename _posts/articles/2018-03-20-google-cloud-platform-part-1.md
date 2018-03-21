@@ -10,7 +10,7 @@ tags:
   - mobile app
   - development
 related:
-  - /posts/latest-projects-and-other-news.html
+  - /blog/posts/latest-projects-and-other-news.html
 image:
     title: stock/google-phone-1920.jpg
     thumb: stock/google-phone-1920-t.jpg
