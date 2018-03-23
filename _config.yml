@@ -29,7 +29,7 @@ collections:
 sass:
   sass_dir: _sass
   style: :compressed
-gems:
+plugins:
 - jekyll-gist
 - jekyll-paginate
 paginate: 5                      # Paginates all X entries

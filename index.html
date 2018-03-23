@@ -145,7 +145,7 @@ links:
   <div class="container">
     <h1 class="text-center">Latest Article</h1>
     <div class="row flow-offset-2">
-      {% for post in site.categories.['articles'] limit: 1 %}
+      {% for post in site.categories.articles limit: 1 %}
         <div class="col-sm-12">
           {% include _post.html %}
         </div>
@@ -167,7 +167,7 @@ links:
   <div class="container">
     <h1 class="text-center">Latest Posts</h1>
     <div class="row flow-offset-2">
-      {% for post in site.categories.['posts'] limit: 3 %}
+      {% for post in site.categories.posts limit: 3 %}
         <div class="col-sm-6 col-md-4">
           {% include _post.html thumbnail=true %}
         </div>

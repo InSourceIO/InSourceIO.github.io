@@ -12,9 +12,9 @@ tags:
 related:
   - /blog/posts/latest-projects-and-other-news.html
 image:
-    title: stock/google-phone-1920.jpg
-    thumb: stock/google-phone-1920-t.jpg
-    homepage: finger/google-phone-1920.jpg
+    title: stock/gcp-datacenter-1920.jpg
+    thumb: stock/gcp-datacenter-1920-t.jpg
+    homepage: stock/gcp-datacenter-1920.jpg
 ---
 
 ## ~&gt; ./start --debug --with-args -Xenv:dev
@@ -149,7 +149,7 @@ Notice the environment variable. This was necessary to allow a local development
 @SpringBootApplication
 public class HelloworldApplication {
   public static void main(String[] args) {
-    SpringApplication springApplication = new SpringApplication(HelloworldApplication::class);
+    SpringApplication springApplication = new SpringApplication(HelloworldApplication.class);
 
     String env = System.getenv("ENVIRONMENT");
     if (env == null) {

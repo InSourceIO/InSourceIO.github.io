@@ -14,9 +14,9 @@ related:
   - /blog/articles/at-once-part-1.html
   - /blog/articles/at-once-part-3.html
 image:
-    title: stock/cars-1920.jpeg
-    thumb: stock/cars-1920-t.jpeg
-    homepage: stock/cars-1920.jpeg
+    title: stock/atlanta-1920.jpg
+    thumb: stock/atlanta-1920-t.jpg
+    homepage: stock/atlanta-1920.jpg
 mediaplayer: false
 ---
 

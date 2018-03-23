@@ -6,7 +6,7 @@ subheadline: Hear from our engineers
 noindex: true
 ---
 <div class="row">
-  {% for post in site.categories.['posts'] %}
+  {% for post in site.categories.posts %}
     {% assign x = forloop.index | modulo: 2 %}
     <div class="col-md-6">
       {% include _post.html thumbnail=true %}

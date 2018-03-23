@@ -14,9 +14,9 @@ related:
   - /blog/articles/at-once-part-2.html
   - /blog/articles/at-once-part-3.html
 image:
-    title: stock/cars-1920.jpeg
-    thumb: stock/cars-1920-t.jpeg
-    homepage: stock/cars-1920.jpeg
+    title: stock/sunrise-1920.jpg
+    thumb: stock/sunrise-1920-t.jpg
+    homepage: stock/sunrise-1920.jpg
 ---
 
 [sjohnr][1] / [at-once][2]

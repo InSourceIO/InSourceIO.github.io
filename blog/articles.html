@@ -6,12 +6,12 @@ subheadline: Well written informative articles
 noindex: true
 ---
 <div class="row">
-  {% for post in site.categories.['articles'] %}
+  {% for post in site.categories.articles %}
   {% assign x = forloop.index | modulo: 2 %}
     <div class="col-md-6">
       {% include _post.html thumbnail=true %}
     </div>
-  {% if x == 0 and forloop.index < forloop.length %}
+    {% if x == 0 and forloop.index < forloop.length %}
 </div>
 <div class="row">
     {% endif %}
