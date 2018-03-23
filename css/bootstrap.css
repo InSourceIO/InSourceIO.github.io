@@ -7415,7 +7415,7 @@ a.badge:hover, a.badge:focus {
 @media (min-width: 1199px) {
   .jumbotron h1,
   .jumbotron .h1 {
-    font-size: 79px;
+    font-size: 59px;
   }
   .jumbotron h1 small,
   .jumbotron .h1 small {
