@@ -723,9 +723,7 @@ function isIE2() {
  */
 
 
-$(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-})
+$('[data-toggle="tooltip"]').tooltip()
 
 
 /**
@@ -734,7 +732,7 @@ $(function () {
  */
 
 
-$('.nav-tabs a').click(function (e) {
+$('[role="tablist"] a').click(function (e) {
     e.preventDefault()
     $(this).tab('show')
 })
