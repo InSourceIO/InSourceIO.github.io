@@ -11,6 +11,7 @@ tags:
   - development
 related:
   - /blog/articles/google-cloud-platform-part-1.html
+  - /blog/posts/google-cloud-platform-part-2.html
 image:
     title: stock/2018-start-1920.jpg
     thumb: stock/2018-start-1920-t.jpg

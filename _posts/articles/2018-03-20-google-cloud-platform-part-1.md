@@ -11,6 +11,7 @@ tags:
   - development
 related:
   - /blog/posts/latest-projects-and-other-news.html
+  - /blog/posts/google-cloud-platform-part-2.html
 image:
     title: stock/gcp-datacenter-1920.jpg
     thumb: stock/gcp-datacenter-1920-t.jpg
