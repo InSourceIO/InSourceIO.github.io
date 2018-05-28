@@ -10,9 +10,9 @@ tags:
   - security
   - development
 image:
-    title: posts/spring-boot.jpg
-    thumb: posts/spring-boot-t.jpg
-    homepage: posts/spring-boot.jpg
+    title: posts/spring-boot.png
+    thumb: posts/spring-boot-t.png
+    homepage: posts/spring-boot.png
 ---
 
 In this series of articles, we'll discuss how to implement pure (stateless) API security for your REST application in Spring Boot using an Authorization header and a custom security scheme.

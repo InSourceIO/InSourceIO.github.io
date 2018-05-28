@@ -10,9 +10,9 @@ tags:
   - security
   - development
 image:
-    title: posts/spring-boot.jpg
-    thumb: posts/spring-boot-t.jpg
-    homepage: posts/spring-boot.jpg
+    title: posts/spring-boot.png
+    thumb: posts/spring-boot-t.png
+    homepage: posts/spring-boot.png
 ---
 
 In the previous article, we discussed adding Basic authentication to our project and turned off session management for a pure stateless API. In this article, we'll discuss how to extend that using an `Authorization` header and a custom security scheme.
