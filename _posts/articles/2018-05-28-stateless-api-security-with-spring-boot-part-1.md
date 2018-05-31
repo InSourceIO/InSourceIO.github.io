@@ -1,7 +1,7 @@
 ---
 layout: post
 subheadline: Spring Boot Series
-title: Stateless API Security with Spring Boot
+title: Stateless API Security with Spring Boot, Part 1
 teaser: Example project for securing REST endpoints with an Authorization header for API security.
 categories:
   - articles
@@ -9,6 +9,8 @@ tags:
   - spring boot
   - security
   - development
+related:
+  - /blog/articles/stateless-api-security-with-spring-boot-part-2.html
 image:
     title: posts/spring-boot.png
     thumb: posts/spring-boot-t.png

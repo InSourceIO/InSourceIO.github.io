@@ -1,7 +1,7 @@
 ---
 layout: post
 subheadline: Spring Boot Series
-title: Stateless API Security with Spring Boot
+title: Stateless API Security with Spring Boot, Part 2
 teaser: Example project for securing REST endpoints with an Authorization header for API security.
 categories:
   - articles
@@ -9,17 +9,19 @@ tags:
   - spring boot
   - security
   - development
+related:
+  - /blog/articles/stateless-api-security-with-spring-boot-part-1.html
 image:
     title: posts/spring-boot.png
     thumb: posts/spring-boot-t.png
     homepage: posts/spring-boot.png
 ---
 
-In the previous article, we discussed adding Basic authentication to our project and turned off session management for a pure stateless API. In this article, we'll discuss how to extend that using an `Authorization` header and a custom security scheme.
+In the [previous article](/blog/articles/stateless-api-security-with-spring-boot-part-1.html), we discussed adding Basic authentication to our project and turned off session management for a pure stateless API. In this article, we'll discuss how to extend that using an `Authorization` header and a custom security scheme.
 
 ## Custom Authentication
 
-Let's now turn our attention to how to evolve beyond the Basic authentication scheme, which has limited uses for us in practice (though it can be a very suitable model for simple app-to-app security). Let's imagine that we want to provision API keys for clients to consume our API. With the above concepts in place, we have the ability to do username/password authentication. But we need to move to a new scheme that only uses tokens as credentials.
+Let's now turn our attention to how to evolve beyond the Basic authentication scheme, which has limited uses for us in practice (though it can be a very suitable model for simple app-to-app security). Let's imagine that we want to provision API keys for clients to consume our API. With the previous concepts in place, we have the ability to do username/password authentication. But we need to move to a new scheme that only uses tokens as credentials.
 
 ### Add Pre-Authentication
 
@@ -154,7 +156,6 @@ There's some magic in the `UserDetailsService`, so let's explore that. Here's th
 ```java
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -169,7 +170,6 @@ public class AuthorizationUserDetailsService implements UserDetailsService {
     private static final Logger logger = LoggerFactory.getLogger(AuthorizationUserDetailsService.class);
 
     @Override
-    @Cacheable(value = "users", key = "#authorizationHeader")
     public UserDetails loadUserByUsername(String authorizationHeader) throws UsernameNotFoundException {
         logger.info("Loading user for Authorization header: " + authorizationHeader);
 
