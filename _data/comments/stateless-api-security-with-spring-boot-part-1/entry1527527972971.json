@@ -5,9 +5,5 @@
   "url": "https://insource.io",
   "message": "The source code for this article is on <a href=\"https://github.com/InSourceSoftware/spring-ws-examples/tree/master/basicauth-security-example\">GitHub</a>.",
   "date": 1527527972,
-  "timestamp": 1527527972,
-  "tags": [
-    "comment-subscription"
-  ],
-  "layout": "post"
+  "timestamp": 1527527972
 }
