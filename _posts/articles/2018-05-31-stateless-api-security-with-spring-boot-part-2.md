@@ -32,10 +32,12 @@ Let's use this concept with the `Authorization` header. Replace the Java config 
 ```java
 import org.springframework.boot.autoconfigure.security.Http401AuthenticationEntryPoint;
 import org.springframework.cache.CacheManager;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.concurrent.ConcurrentMapCache;
 import org.springframework.cache.support.SimpleCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.ProviderManager;
@@ -43,8 +45,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.core.userdetails.UserDetailsByNameServiceWrapper;
-import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.AuthenticationUserDetailsService;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationProvider;
 import org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationToken;
@@ -80,6 +81,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     public RequestHeaderAuthenticationFilter preAuthenticationFilter() {
         RequestHeaderAuthenticationFilter preAuthenticationFilter = new RequestHeaderAuthenticationFilter();
         preAuthenticationFilter.setPrincipalRequestHeader("Authorization");
+        preAuthenticationFilter.setCredentialsRequestHeader("Authorization");
         preAuthenticationFilter.setAuthenticationManager(authenticationManager());
         preAuthenticationFilter.setExceptionIfHeaderMissing(false);
 
@@ -101,12 +103,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
-    public UserDetailsByNameServiceWrapper<PreAuthenticatedAuthenticationToken> userDetailsServiceWrapper() {
-        return new UserDetailsByNameServiceWrapper<>(userDetailsService());
-    }
-
-    @Bean
-    public UserDetailsService userDetailsService() {
+    public AuthenticationUserDetailsService<PreAuthenticatedAuthenticationToken> userDetailsServiceWrapper() {
         return new AuthorizationUserDetailsService();
     }
 
@@ -135,15 +132,17 @@ What this does is assume that the authentication was performed elsewhere, and ou
 
 With this filter, we have to define a bunch of pieces to make it work.
 
-1\. We've provided an `AuthenticationManager` with a single `AuthenticationProvider`.
+1\. We've provided an instance of `RequestHeaderAuthenticationFilter`.
 
-Our provider of type `PreAuthenticatedAuthenticationProvider` expects an `Authentication`.
+We've configured it with a principal (required) and credentials (optional) and told it not to puke on missing header (so our authentication entrypoint is used instead).
 
-2\. We've provided a `AuthenticationUserDetailsService` to do the conversion from `UserDetails` to `Authentication`.
+2\. We've provided an `AuthenticationManager` with a single `AuthenticationProvider`.
 
-The `UserDetailsByNameServiceWrapper` we provided expects a `UserDetailsService`.
+Our provider of type `PreAuthenticatedAuthenticationProvider` expects an `AuthenticationUserDetailsService` parameterized with `PreAuthenticatedAuthenticationToken`.
 
-3\. We've implemented `AuthorizationUserDetailsService` to provide that `UserDetails`.
+3\. We've provided a `AuthenticationUserDetailsService` to do the creation of a `UserDetails`.
+
+This is where our custom authorization logic will go, based on the `PreAuthenticatedAuthenticationToken` given by our provider.
 
 #### AuthenticationEntryPoint
 
@@ -151,7 +150,7 @@ Our entry point simply throws a `401 Unauthorized` with a `WWW-Authenticate` res
 
 #### UserDetailsService
 
-There's some magic in the `UserDetailsService`, so let's explore that. Here's the definition:
+There's some magic in the `AuthenticationUserDetailsService`, so let's explore that. Here's the definition:
 
 ```java
 import org.slf4j.Logger;
@@ -166,11 +165,12 @@ import java.util.Collections;
 import java.util.regex.Matcher;
 
 /* Not marked @Component to simplify WebSecurityConfiguration. */
-public class AuthorizationUserDetailsService implements UserDetailsService {
+public class AuthorizationUserDetailsService implements AuthenticationUserDetailsService<PreAuthenticatedAuthenticationToken> {
     private static final Logger logger = LoggerFactory.getLogger(AuthorizationUserDetailsService.class);
 
     @Override
-    public UserDetails loadUserByUsername(String authorizationHeader) throws UsernameNotFoundException {
+    public UserDetails loadUserDetails(PreAuthenticatedAuthenticationToken token) throws UsernameNotFoundException {
+        String authorizationHeader = token.getCredentials().toString();
         logger.info("Loading user for Authorization header: " + authorizationHeader);
 
         // Check authentication scheme
@@ -199,11 +199,11 @@ public class AuthorizationUserDetailsService implements UserDetailsService {
 }
 ```
 
-This is the easiest place I can think of to place our custom auth scheme logic. The `UserDetailsService` is usually used to convert a username into a `UserDetails`. But we can easily use it to do some validation first. The `Authorization` header value is passed in, so we can use that to convert to a user however we wish to.
+This is the easiest place I can think of to place our custom auth scheme logic. The `AuthenticationUserDetailsService` is usually used to convert a principal/credentials pair into a `UserDetails`. But we can easily use it to do some validation first. The `Authorization` header value is passed in the `PreAuthenticatedAuthenticationToken`, so we can use that to convert to a user however we wish to.
 
 First, we validate that the header value is in the right format. Marginally expensive, but negligible in the scheme of things.
 
-Then we parse the `apiKey` from the header. Once we have this, we're in the driver's seat as to how we implement the lookup/conversion. You can also place roles or other information in this `User` object, or define your own custom `UserDetails` implementation.
+Then we parse the `apiKey` from the header. Once we have this, we're in the driver's seat as to how we implement the lookup/conversion. You can look up the user in an API key provisioning database or load them from a JWT. You can also place roles or other information in this `User` object, or define your own custom `UserDetails` implementation.
 
 What's missing from this example is what happens if the `apiKey` is invalid. Just throw an exception similar to the above validation logic. By the way, here's that exception:
 
@@ -223,6 +223,8 @@ public class AuthorizationHeaderException extends AuthenticationException {
     }
 }
 ```
+
+You can also use the `UsernameNotFoundException` from the method signature if you prefer.
 
 ### Stateless???
 
@@ -266,13 +268,14 @@ With that in place (replace with your chosen production sidecar for caching, out
 
 ```java
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.AuthenticationUserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationToken;
 
-public class AuthorizationUserDetailsService implements UserDetailsService {
+public class AuthorizationUserDetailsService implements AuthenticationUserDetailsService<PreAuthenticatedAuthenticationToken> {
     @Override
-    @Cacheable(value = "users", key = "#authorizationHeader")
-    public UserDetails loadUserByUsername(String authorizationHeader) throws UsernameNotFoundException {
+    @Cacheable(value = "users", key = "#token")
+    public UserDetails loadUserDetails(PreAuthenticatedAuthenticationToken token) throws UsernameNotFoundException {
         ...
     }
 }
@@ -280,7 +283,7 @@ public class AuthorizationUserDetailsService implements UserDetailsService {
 
 What we have here is a stateless application that uses no session management (no Cookies for you) and yet can cache user details (actually API consumers) as close to the application as we like. Using the caching layer, you can define when and how often your user details expire or are purged, etc.
 
-With caching in place, our API calls to load the `Authentication` into the `SecurityContext` does not exhibit such a terrible performance penalty.
+With caching in place, our API calls to load the `Authentication` into the `SecurityContext` do not exhibit such a terrible performance penalty.
 
 ## Conclusion
 
