@@ -11,6 +11,7 @@ tags:
   - development
 related:
   - /blog/articles/stateless-api-security-with-spring-boot-part-2.html
+  - /blog/articles/custom-authentication-with-spring-boot.html
 image:
     title: posts/spring-boot.png
     thumb: posts/spring-boot-t.png

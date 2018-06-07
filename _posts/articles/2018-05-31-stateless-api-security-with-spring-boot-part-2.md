@@ -11,6 +11,7 @@ tags:
   - development
 related:
   - /blog/articles/stateless-api-security-with-spring-boot-part-1.html
+  - /blog/articles/custom-authentication-with-spring-boot.html
 image:
     title: posts/spring-boot.png
     thumb: posts/spring-boot-t.png
@@ -19,7 +20,7 @@ image:
 
 In the [previous article](/blog/articles/stateless-api-security-with-spring-boot-part-1.html), we discussed adding Basic authentication to our project and turned off session management for a pure stateless API. In this article, we'll discuss how to extend that using an `Authorization` header and a custom security scheme.
 
-## Custom Authentication
+## Custom Authentication Scheme
 
 Let's now turn our attention to how to evolve beyond the Basic authentication scheme, which has limited uses for us in practice (though it can be a very suitable model for simple app-to-app security). Let's imagine that we want to provision API keys for clients to consume our API. With the previous concepts in place, we have the ability to do username/password authentication. But we need to move to a new scheme that only uses tokens as credentials.
 
