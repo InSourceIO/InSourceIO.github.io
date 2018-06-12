@@ -12,11 +12,14 @@ tags:
 related:
   - /blog/articles/stateless-api-security-with-spring-boot-part-1.html
   - /blog/articles/custom-authentication-with-spring-boot.html
+  - /blog/articles/custom-authorization-with-spring-boot.html
 image:
     title: posts/spring-boot.png
     thumb: posts/spring-boot-t.png
     homepage: posts/spring-boot.png
 ---
+
+## Introduction
 
 In the [previous article](/blog/articles/stateless-api-security-with-spring-boot-part-1.html), we discussed adding Basic authentication to our project and turned off session management for a pure stateless API. In this article, we'll discuss how to extend that using an `Authorization` header and a custom security scheme.
 

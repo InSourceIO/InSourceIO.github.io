@@ -12,11 +12,14 @@ tags:
 related:
   - /blog/articles/stateless-api-security-with-spring-boot-part-1.html
   - /blog/articles/stateless-api-security-with-spring-boot-part-2.html
+  - /blog/articles/custom-authorization-with-spring-boot.html
 image:
     title: posts/spring-boot.png
     thumb: posts/spring-boot-t.png
     homepage: posts/spring-boot.png
 ---
+
+## Introduction
 
 In the [previous article](/blog/articles/stateless-api-security-with-spring-boot-part-2.html), we discussed adding an `Authorization` header and a custom security scheme to a Spring Boot application for stateless API security. In this article, we'll discuss how to enable Restful username/password authentication.
 
