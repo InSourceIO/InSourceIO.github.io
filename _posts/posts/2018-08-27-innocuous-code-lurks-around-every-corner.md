@@ -2,7 +2,7 @@
 layout: post
 subheadline: Tech Rant
 title: Innocuous Code Lurks Around Every Corner
-teaser: !@#$%^&*
+teaser: "!@#$%^&*"
 categories:
   - posts
 tags:
@@ -38,7 +38,7 @@ dependencies {
 I'm using the `client_credentials` grant type for simplicity, but will eventually switch to `authorization_code`.
 
 <div class="alert alert-info" role="alert">
-    There's a pretty decent tutorial on this topic over at [Baeldung](https://www.baeldung.com/spring-security-oauth2-authentication-with-reddit).
+    There's a pretty decent tutorial on this topic over at <a href="https://www.baeldung.com/spring-security-oauth2-authentication-with-reddit">Baeldung</a>.
 </div>
 
 Here's a simple configuration using `@Value` properties from a `@PropertySource` pointing to `reddit.properties` in `src/main/resources`.
@@ -241,7 +241,7 @@ Yep, it's confirmed. There's rate limiting going on. But if we're not DDoS'ing R
 [Reddit Wiki - API](https://github.com/reddit-archive/reddit/wiki/API)
 
 > Change your client's User-Agent string to something unique and descriptive, including the target platform, a unique application identifier, a version string, and your username as contact information, in the following format:
-> * <platform>:<app ID>:<version string> (by /u/<reddit username>)
+> * &lt;platform&gt;:&lt;app ID&gt;:&lt;version string&gt; (by /u/<reddit username>)
 > * Example: User-Agent: android:com.example.myredditapp:v1.2.3 (by /u/kemitche)
 > * Many default User-Agents (like "Python/urllib" or "Java") are drastically limited to encourage unique and descriptive user-agent strings.
 
