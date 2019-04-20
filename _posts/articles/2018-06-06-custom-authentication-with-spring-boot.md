@@ -208,6 +208,7 @@ Once we have a basic custom filter in place to do authentication (note we didn't
 
 ```java
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.boot.autoconfigure.security.Http401AuthenticationEntryPoint;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -215,6 +216,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
@@ -242,6 +244,8 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
             .and()
                 .csrf().csrfTokenRepository(csrfTokenRepository())
+            .and()
+                .exceptionHandling().authenticationEntryPoint(authenticationEntryPoint())
             .and()
                 .formLogin().disable();
     }
@@ -291,6 +295,11 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
+    public AuthenticationEntryPoint authenticationEntryPoint() {
+        return new Http401AuthenticationEntryPoint("MyRealm");
+    }
+
+    @Bean
     public ObjectMapper objectMapper() {
         return new ObjectMapper();
     }
@@ -303,7 +312,7 @@ There's a few things going on here, so let's break it down.
 
 First, we wire in our custom extension of `UsernamePasswordAuthenticationFilter`. It's best to define an order for the filter to fit into the filter chain. In this case, it doesn't clash with anything in the defaults, so we could skip this step, but in case we add pre-auth (see previous tutorials), the `addFilterAfter()` ensures it will be *after* that filter if present. In this case, it fires pretty early in the chain.
 
-Next, we manually open up the `/` and `/login` routes and lock down everything else.
+Next, we manually open up the `/login` and `/csrf` routes and lock down everything else.
 
 We also need to make sure our CSRF protection is consistent between the default filter chain and our custom filter, so we need to define the glue piece manually, which is the `HttpSessionCsrfTokenRepository`. We use this later as well.
 
@@ -319,7 +328,14 @@ Then, we define the request matcher. We don't have helper methods for this custo
 
 Also similar to the defaults, we set up the username and password fields that will hold our principal and credentials. I've explicitly set them to call out where to configure them for your needs.
 
-We also define a `SessionAuthenticationStrategy`, since we don't get any defaults for free. I haven't ensured this is perfectly consistent with the defaults, so comments are welcome, but in this example, we're also adding session-fixation and CSRF protection to the filter chain with a `CompositeSessionAuthenticationStrategy`. The `CsrfAuthenticationStrategy` uses the same `CsrfTokenRepository` we defined above, which also gets used by our own custom controller (shown below) to expose the CSRF token.
+We then define a `SessionAuthenticationStrategy`, since we don't get any defaults for free. I haven't ensured this is perfectly consistent with the defaults, so comments are welcome, but in this example, we're also adding session-fixation and CSRF protection to the filter chain with a `CompositeSessionAuthenticationStrategy`. The `CsrfAuthenticationStrategy` uses the same `CsrfTokenRepository` we defined above, which also gets used by our own custom controller (shown below) to expose the CSRF token.
+
+We also define an `AuthenticationEntryPoint` to throw a `401 Unauthorized` with a `WWW-Authenticate` response header containing our custom realm name when unauthenticated API calls are made.
+
+<p class="alert alert-info">
+<strong>Update:</strong> If you are using Spring Boot 2.x, please note that the `Http401AuthenticationEntryPoint` class has been removed. For reference, <a href="https://github.com/spring-projects/spring-boot/blob/v1.5.20.RELEASE/spring-boot-autoconfigure/src/main/java/org/springframework/boot/autoconfigure/security/Http401AuthenticationEntryPoint.java">view this file on GitHub</a> if you need to copy it and define it within your project.
+```
+</p>
 
 Lastly, we define a simple `AuthenticationManager` and `AuthenticationSuccessHandler`. The important thing about the `AuthenticationManager` is we need to expose it as a bean so we can add it to our custom filter.
 
@@ -343,8 +359,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AuthController {
     @GetMapping("/")
-    @ResponseStatus(HttpStatus.ACCEPTED)
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void getIndex() {
+    }
+
+    @GetMapping("/login")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void getLogin() {
     }
 
     @GetMapping("/csrf")
