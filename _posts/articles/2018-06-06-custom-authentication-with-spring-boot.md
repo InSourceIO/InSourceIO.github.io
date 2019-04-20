@@ -333,8 +333,7 @@ We then define a `SessionAuthenticationStrategy`, since we don't get any default
 We also define an `AuthenticationEntryPoint` to throw a `401 Unauthorized` with a `WWW-Authenticate` response header containing our custom realm name when unauthenticated API calls are made.
 
 <p class="alert alert-info">
-<strong>Update:</strong> If you are using Spring Boot 2.x, please note that the `Http401AuthenticationEntryPoint` class has been removed. For reference, <a href="https://github.com/spring-projects/spring-boot/blob/v1.5.20.RELEASE/spring-boot-autoconfigure/src/main/java/org/springframework/boot/autoconfigure/security/Http401AuthenticationEntryPoint.java">view this file on GitHub</a> if you need to copy it and define it within your project.
-```
+<strong>Update:</strong> If you are using Spring Boot 2.x, please note that the <code>Http401AuthenticationEntryPoint</code> class has been removed. For reference, <a href="https://github.com/spring-projects/spring-boot/blob/v1.5.20.RELEASE/spring-boot-autoconfigure/src/main/java/org/springframework/boot/autoconfigure/security/Http401AuthenticationEntryPoint.java">view this file on GitHub</a> if you need to copy it and define it within your project.
 </p>
 
 Lastly, we define a simple `AuthenticationManager` and `AuthenticationSuccessHandler`. The important thing about the `AuthenticationManager` is we need to expose it as a bean so we can add it to our custom filter.
@@ -375,7 +374,7 @@ public class AuthController {
 }
 ```
 
-The `GET /` route is optional, but creates a simple landing page that tells you that you've successfully logged in.
+The `GET /` and `GET /login` routes are optional, but creates a simple landing page that tells you that you've logged in and out successfully.
 
 The `GET /csrf` route replaces the `_csrf` hidden attribute from the Form Login page by utilizing the aforementioned `CsrfTokenRepository` through the `CsrfTokenArgumentResolver`. API consumers will need to obtain the CSRF prior to invoking the `/login` route, as the entire application has CSRF protection enabled. Invoking it produces the following output:
 
