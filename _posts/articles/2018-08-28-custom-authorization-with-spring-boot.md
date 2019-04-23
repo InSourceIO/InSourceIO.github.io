@@ -349,7 +349,7 @@ Let's break this down.
 4. Wire that up to the `DefaultMethodSecurityExpressionHandler` to be used by our `@Pre` and `@Post` method security.
 
 <p class="alert alert-info">
-<strong>Note:</strong> We can't simply component-scan the `PermissionEvaluatorManager` because we have numerous of `PermissionEvaluator`s on the classpath. The technique above ensures only the one we want is used. There are a few hacky ways to do this, but the above is the cleanest way to ensure our intended manager class is used.
+<strong>Note:</strong> We can't simply component-scan the <code>PermissionEvaluatorManager</code> because we have numerous of <code>PermissionEvaluator</code>s on the classpath. The technique above ensures only the one we want is used. There are a few hacky ways to do this, but the above is the cleanest way to ensure our intended manager class is used.
 </p>
 
 ### Secure your API
