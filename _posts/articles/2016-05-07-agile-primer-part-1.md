@@ -4,7 +4,7 @@ subheadline: Agile Primer Series
 title: Agile Primer, Part 1
 teaser: We're going agile!
 categories:
-  - posts
+  - articles
 tags:
   - agile
   - process
@@ -13,6 +13,8 @@ image:
     title: stock/agile-2000.jpeg
     thumb: stock/agile-2000-t.jpeg
     homepage: stock/agile-2000.jpeg
+related:
+  - /articles/agile-primer-part-2.html
 ---
 Have you ever heard this? "We're going agile!"
 
@@ -61,13 +63,13 @@ Agile is simply one attempt to capture that into a codified list that can be use
 
 Engineers, specifically of the software variety, are exceptionally creative and passionate individuals. At least, most of them are. And the ones that aren't probably don't deserve the title. This is true of most disciplines, really. Think about it. Those that are the best at something are usually those that care the most about what they are doing.
 
-So when a manager, chief executive, project sponsor, or other person in charge at a company sets the tone of the Engineering organization by aspousing agile, claiming to *be* it, and generally working everyone into a tizzy about it, and thehn proceeds to drop the ball and produces no action and provides no support for its actual adoption, this is deeply discouraging and de-motivating. Those in the organization that have truly earned the title Engineer will usually make directed efforts to fix the situation or bring about a reform in the name of what was intended, not what was implemented or put into practice.
+So when a manager, chief executive, project sponsor, or other person in charge at a company sets the tone of the Engineering organization by aspousing agile, claiming to *be* it, and generally working everyone into a tizzy about it, and then proceeds to drop the ball and produces no action and provides no support for its actual adoption, this is deeply discouraging and de-motivating. Those in the organization that have truly earned the title Engineer will usually make directed efforts to fix the situation or bring about a reform in the name of what was intended, not what was implemented or put into practice.
 
 Needless to say, this does not usually go well.
 
 This is usually a good first sign that your organization is not agile. Passionate people can spot false truth claims a mile away. Chiefly because they are the first people to latch onto the ideas being proclaimed, and the most let down when they realize they are total malarky. They build up a natural defense to lies and false sentiment, though they never truly let go of the ideals that drive them to achieve those lofty and aspirational goals.
 
-The second sign of an organization that is not agile (but claims to be) is a decline in morale of the people around the first group (the passionate ones). Naturally, most managerial types blame the first group for the second groups problems. Some even go so far as to say something like "What are *you* doing to fx it?" This does not help morale. And it's not really good leadership either. It's usually a sign that someone is just plain tired of hearing all the complaining.
+The second sign of an organization that is not agile (but claims to be) is a decline in morale of the people around the first group (the passionate ones). Naturally, most managerial types blame the first group for the second group's problems. Some even go so far as to say something like "What are *you* doing to fx it?" This does not help morale. And it's not really good leadership either. It's usually a sign that someone is just plain tired of hearing all the complaining.
 
 The third sign that your organization is not agile is a little something we like to call __The Mass Exodus__. This usually occurs when the death-knoll is ringing loudly. For example, when a new executive or director is brought in to "reform" the department, and it becomes abundantly clear that even the idea of being agile is not important, let alone understood and strived toward. Sometimes it occurs when the organization starts shifting their message, and contradicting the message that was delivered consistently before. For example, "We don't use agile methods here because the nature of our business doesn't allow it."
 
