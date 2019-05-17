@@ -2,6 +2,7 @@
 layout: post
 subheadline: Spring Boot Series
 title: Custom Authorization with Spring Boot
+teaser: Example project for securing REST endpoints with a custom authorization scheme.
 teaser: 
 categories:
   - articles
