@@ -14,7 +14,7 @@ image:
     thumb: stock/agile-2000-t.jpeg
     homepage: stock/agile-2000.jpeg
 related:
-  - /articles/agile-primer-part-2.html
+  - /blog/articles/agile-primer-part-2.html
 ---
 Have you ever heard this? "We're going agile!"
 

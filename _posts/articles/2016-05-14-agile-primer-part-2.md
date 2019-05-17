@@ -14,7 +14,7 @@ image:
     thumb: stock/city-girl-1920-t.jpg
     homepage: stock/city-girl-1920.jpg
 related:
-  - /articles/agile-primer-part-1.html
+  - /blog/articles/agile-primer-part-1.html
 ---
 In [my last post][1], I discussed some of the frustrations and problems software engineers encounter when dealing with organizations that are "going agile" as it has come to be known. We also discussed the heavy burden borne by leaders and management when supporting the plight for becoming an agile organization. As interesting as that is to talk about, the focus of this article is on the process from the perspective of the grass roots, or the worker's point of view. Let's jump right in.
 
