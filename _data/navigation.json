@@ -10,76 +10,7 @@
   {
     "title": "What We Do",
     "url": "/what/",
-    "class": "dropdown-megamenu",
-    "__megamenu": [
-      {
-        "title": "Section 1",
-        "dropdown": [
-          {
-            "title": "Item 1",
-            "url": "/services/item1"
-          },
-          {
-            "title": "Item 2",
-            "url": "/services/item2"
-          },
-          {
-            "title": "Item 3",
-            "url": "/services/item3"
-          },
-          {
-            "title": "Item 4",
-            "url": "/services/item4"
-          }
-        ]
-      },
-      {
-        "title": "Section 2",
-        "dropdown": [
-          {
-            "title": "Item 1",
-            "url": "/services/item1"
-          },
-          {
-            "title": "Item 2",
-            "url": "/services/item2"
-          },
-          {
-            "title": "Item 3",
-            "url": "/services/item3"
-          },
-          {
-            "title": "Item 4",
-            "url": "/services/item4"
-          },
-          {
-            "title": "Item 5",
-            "url": "/services/item5"
-          },
-          {
-            "title": "Item 6",
-            "url": "/services/item6"
-          }
-        ]
-      },
-      {
-        "title": "Section 3",
-        "dropdown": [
-          {
-            "title": "Item 1",
-            "url": "/services/item1"
-          },
-          {
-            "title": "Item 2",
-            "url": "/services/item2"
-          },
-          {
-            "title": "Item 3",
-            "url": "/services/item3"
-          }
-        ]
-      }
-    ]
+    "class": "dropdown-megamenu"
   },
   {
     "__title": "About",
