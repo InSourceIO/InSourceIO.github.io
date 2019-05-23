@@ -127,10 +127,10 @@ layout: minimal
                     <div class="box__body box__middle btn-shadow round-small">
                       <h6 class="text-uppercase">{{ comment.name }}</h6>
                       <time datetime="{{ comment.date | date_to_xmlschema }}" class="meta">{{ comment.date | date: "%B %e, %Y" }} at {{ comment.date | date: "%l:%M %P" }}</time>
-                      {% if comment.url != NULL %}
+                      {% if comment.url and comment.url != "" %}
                         <a href="{{ comment.url }}" target="_blank" class="badge material-icons-link pull-right"></a>
                       {% endif %}
-                      <p class="big">{{ comment.message }}</p>
+                      <p class="big">{{ comment.message | markdownify }}</p>
                       <!--<a href="#" class="follow"></a>-->
                     </div>
                   </blockquote>
