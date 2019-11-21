@@ -30,12 +30,6 @@
         "title": "LinkedIn"
       },
       {
-        "name": "Google+",
-        "url": "https://plus.google.com/+StephenRiesenberg",
-        "class": "fa-google-plus",
-        "title": "Google+"
-      },
-      {
         "name": "Facebook",
         "url": "http://www.facebook.com/Stephen.Riesenberg",
         "class": "fa-facebook",
