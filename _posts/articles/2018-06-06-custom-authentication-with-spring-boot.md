@@ -2,7 +2,7 @@
 layout: post
 subheadline: Spring Boot Series
 title: Custom Authentication with Spring Boot
-teaser: Example project for securing REST endpoints with an Authorization header for API security.
+teaser: Example project for securing REST endpoints with custom authentication.
 categories:
   - articles
 tags:
