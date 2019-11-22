@@ -14,9 +14,9 @@ related:
   - /blog/articles/stateless-api-security-with-spring-boot-part-2.html
   - /blog/articles/custom-authentication-with-spring-boot.html
 image:
-    title: posts/spring-boot.png
-    thumb: posts/spring-boot-t.png
-    homepage: posts/spring-boot.png
+    title: posts/spring-boot-series.jpg
+    thumb: posts/spring-boot-series-t.jpg
+    homepage: posts/spring-boot-series.jpg
 ---
 
 ## Introduction

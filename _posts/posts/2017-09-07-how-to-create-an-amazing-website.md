@@ -58,7 +58,7 @@ With this website, I focused on the colors of the logo. In particular, I modifie
     }
 </style>
 <div class="text-center">
-    <div class="palette-square color1">#34495e</div>
+    <div class="palette-square color1">#f68522</div>
     <div class="palette-square color2">#071c33</div>
     <div class="palette-square color3">#34495e</div>
     <div class="palette-square color4">#546e7a</div>
