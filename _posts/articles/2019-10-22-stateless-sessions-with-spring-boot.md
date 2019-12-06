@@ -50,7 +50,7 @@ Let's define a build for our project. In this example, we'll actually need two p
     <packaging>jar</packaging>
 
     <name>custom-permissions-example</name>
-    <description>Example project for method security with a custom permission evaluator.</description>
+    <description>Example project for stateless session propagation.</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
