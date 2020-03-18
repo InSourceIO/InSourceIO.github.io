@@ -120,6 +120,7 @@ reCaptcha:
 google:
   scripts:
     url: "https://script.google.com/macros/s/AKfycbxeWuqOhQDk39-lqzSjTO47p2v3kVa3BgYHTN4gf1SLMIf3mrSK/exec"
+    challenge: 47
 
 # Prose Editor
 prose:

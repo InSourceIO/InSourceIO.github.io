@@ -44,6 +44,7 @@
         <p>Subscribe to Our Newsletter to get Important News, Amazing Offers & Inside Scoops:</p>
         <form method="post" action="{{ site.google.scripts.url }}" class="rd-mailform">
           <input type="hidden" name="form-type" value="subscribe" />
+          <input type="hidden" name="challenge" value="{{ site.google.scripts.challenge }}" />
           <div class="form-group">
             <label for="email-footer" class="sr-only">E-mail</label>
             <input type="text" id="email-footer" name="email" placeholder="Enter your e-mail" data-constraints="@NotEmpty @Email" class="form-control" />

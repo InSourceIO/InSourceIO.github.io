@@ -5,6 +5,7 @@
         <h5 class="text-center text-uppercase">Get In Touch</h5>
         <form method="post" action="{{ site.google.scripts.url }}" class="row label-insets rd-mailform">
           <input type="hidden" name="form-type" value="contact" />
+          <input type="hidden" name="challenge" value="{{ site.google.scripts.challenge }}" />
           <div class="form-group col-sm-6">
             <label for="first_name" class="text-uppercase font-secondary form-label">First Name</label>
             <input type="text" id="first_name" name="first_name" data-constraints="@NotEmpty @LettersOnly" placeholder="John" class="form-control" />
