@@ -99,7 +99,7 @@ subheadline: ...for attending this year's Craft fair @ Stony Brook
         <h5 class="text-center">Get In Touch</h5>
         <form method="post" action="{{ site.google.scripts.url }}" class="row label-insets rd-mailform">
           <input type="hidden" name="form-type" value="contact">
-          <input type="hidden" name="challenge" value="{{ site.google.scripts.challenge }}" />
+          <input type="hidden" name="challenge" id="challenge" value="{{ site.google.scripts.challenge }}" />
           <div class="form-group col-sm-6">
             <label for="first_name" class="text-uppercase font-secondary form-label">First Name</label>
             <input type="text" placeholder="Your First Name" name="name" data-constraints="@NotEmpty @LettersOnly" id="first_name" name="first_name" class="form-control">

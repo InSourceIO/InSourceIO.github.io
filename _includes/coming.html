@@ -10,7 +10,7 @@
 
     <form class="offset-1 text-white rd-mailform" method="post" action="{{ site.google.scripts.url }}">
       <input type="hidden" name="form-type" value="notify" />
-      <input type="hidden" name="challenge" value="{{ site.google.scripts.challenge }}" />
+      <input type="hidden" name="challenge" id="challenge" value="{{ site.google.scripts.challenge }}" />
       <div class="form-group col-sm-4 col-sm-offset-3">
         <label for="email" class="sr-only">E-mail</label>
         <input type="email" id="email" name="email" placeholder="example@domain.com" data-constraints="@NotEmpty @Email" class="text-white form-control bg-rgba" />

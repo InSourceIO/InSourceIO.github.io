@@ -23,6 +23,11 @@ function isIE2() {
     return userAgent.indexOf("msie") != -1 ? parseInt(userAgent.split("msie")[1]) : userAgent.indexOf("trident") != -1 ? 11 : userAgent.indexOf("edge") != -1 ? 12 : false;
 };
 
+(function ($) {
+    $(document).ready(function () {
+        $('#challenge').remove();
+    })
+})($)
 
 /**
  * @module       Copyright
