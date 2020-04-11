@@ -14,9 +14,9 @@ related:
   - /blog/articles/custom-authentication-with-spring-boot.html
   - /blog/articles/custom-authorization-with-spring-boot.html
 image:
-    title: posts/spring-boot-series.jpg
-    thumb: posts/spring-boot-series-t.jpg
-    homepage: posts/spring-boot-series.jpg
+    title: posts/spring-boot.png
+    thumb: posts/spring-boot-t.png
+    homepage: posts/spring-boot.png
 ---
 
 ## Introduction
