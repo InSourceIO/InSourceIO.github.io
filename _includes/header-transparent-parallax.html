@@ -1,0 +1,54 @@
+<header class="page-header">
+  <div class="rd-navbar-wrap">
+    <nav class="rd-navbar top-panel-none-items" data-layout="rd-navbar-fixed" data-hover-on="false" data-stick-up="false" data-sm-layout="rd-navbar-fullwidth" data-md-layout="rd-navbar-static">
+      <div class="rd-navbar-inner">
+        {% include navbar-panel.html %}
+
+        <div class="rd-navbar-nav-wrap">
+          {% include navbar-search.html %}
+          {% include navbar-navigation.html %}
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <section>
+    <div data-autoplay="5000" data-slide-effect="fade" data-loop="false" class="swiper-container swiper-slider">
+      <div class="jumbotron text-center">
+        {% include header-content.html %}
+      </div>
+      <div class="swiper-wrapper">
+        <div data-slide-bg="{{ site.baseurl }}/images/stock/adobe/magical-cottage.jpg" class="swiper-slide">
+          <div class="swiper-slide-caption"></div>
+        </div>
+        <div data-slide-bg="{{ site.baseurl }}/images/stock/adobe/magical-book.jpg" class="swiper-slide">
+          <div class="swiper-slide-caption"></div>
+        </div>
+        <div data-slide-bg="{{ site.baseurl }}/images/stock/adobe/magical-scrolls.jpg" class="swiper-slide">
+          <div class="swiper-slide-caption"></div>
+        </div>
+        <div data-slide-bg="{{ site.baseurl }}/images/stock/adobe/magical-parchment.jpg" class="swiper-slide">
+          <div class="swiper-slide-caption"></div>
+        </div>
+        <div data-slide-bg="{{ site.baseurl }}/images/stock/adobe/magical-potions.jpg" class="swiper-slide">
+          <div class="swiper-slide-caption"></div>
+        </div>
+<!--        <div data-slide-bg="{{ site.baseurl }}/images/stock/adobe/magical-lantern.jpg" class="swiper-slide">-->
+<!--          <div class="swiper-slide-caption"></div>-->
+<!--        </div>-->
+<!--        <div data-slide-bg="{{ site.baseurl }}/images/stock/adobe/magical-cauldron.jpg" class="swiper-slide">-->
+<!--          <div class="swiper-slide-caption"></div>-->
+<!--        </div>-->
+<!--        <div data-slide-bg="{{ site.baseurl }}/images/stock/adobe/magical-writings.jpg" class="swiper-slide">-->
+<!--          <div class="swiper-slide-caption"></div>-->
+<!--        </div>-->
+      </div>
+    </div>
+<!--    <div class="rd-parallax">-->
+<!--      <div data-speed="0.6" data-type="media" data-url="{{ site.baseurl }}/images/stock/adobe/magical-cottage.jpg" class="rd-parallax-layer"></div>-->
+<!--      <div data-speed="0.78" data-type="html" data-fade="true" class="well-parallax jumbotron text-center rd-parallax-layer">-->
+<!--        {% include header-content.html %}-->
+<!--      </div>-->
+<!--    </div>-->
+  </section>
+</header>
