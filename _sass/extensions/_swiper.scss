@@ -508,7 +508,7 @@
   }
   h1 {
     small {
-      display: none;
+      //display: none;
     }
   }
 
@@ -521,6 +521,14 @@
     }
     h1 {
       small {
+        display: block;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .jumbotron {
+      .btn {
         display: block;
       }
     }
