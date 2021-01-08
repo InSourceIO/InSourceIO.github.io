@@ -67,7 +67,7 @@ It has worked well in the simple use cases we've used it for in a microservices 
 What I really like about RabbitMQ is the support bolstering it has gotten in the Spring community with [Spring AMQP](https://spring.io/projects/spring-amqp).
 
 <div class="alert alert-info" role="alert">
-  Fun fact, did you know that iMatix, the company founded by Pieter Hintjens, was the initial firm contracted by JPMorgan Chase to build [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol#History)?
+  Fun fact, did you know that iMatix, the company founded by Pieter Hintjens, was the initial firm contracted by JPMorgan Chase to build <a href="https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol#History">AMQP</a>?
 </div>
 
 What I don't necessarily like is the need for a broker when I'm doing simple communication patterns.
@@ -88,7 +88,7 @@ I want an architecture that can evolve in micro-units, like the ZeroMQ programs 
 Come back next time, for an in-depth look at in-spring-zeromq, a little library for hiding ZeroMQ behind a protective enterprise development blanket (on the JVM).
 
 <div class="alert alert-success" role="alert">
-  Check out the library now! [Spring ZeroMQ](https://github.com/InSourceSoftware/in-spring-zeromq)
+  Check out the library now! <a href="https://github.com/InSourceSoftware/in-spring-zeromq">Spring ZeroMQ</a>
 </div>
 
 ## Conclusion
