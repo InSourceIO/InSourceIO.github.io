@@ -11,8 +11,7 @@ tags:
   - development
 related:
   - /blog/articles/stateless-sessions-with-spring-boot.html
-  - /blog/articles/custom-authorization-with-spring-boot.html
-  - /blog/articles/custom-authentication-with-spring-boot.html
+  - /blog/articles/zeromq-on-spring-boot-part-2.html
 image:
     title: stock/adobe/spring-rabbit.jpg
     thumb: stock/adobe/spring-rabbit-t.jpg
