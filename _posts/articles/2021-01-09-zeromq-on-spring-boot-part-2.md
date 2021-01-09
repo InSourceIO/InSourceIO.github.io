@@ -1,7 +1,7 @@
 ---
 layout: post
 subheadline: Spring Boot Series
-title: ZeroMQ with Spring Boot
+title: ZeroMQ with Spring Boot, Part 2
 teaser: Get more done with less setup using ZeroMQ with Spring Boot.
 categories:
   - articles
