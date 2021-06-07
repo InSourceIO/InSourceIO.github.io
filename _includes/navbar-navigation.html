@@ -11,7 +11,7 @@
                 <p>{{ megamenu_item.title }}</p>
                 <ul>
                   {% for dropdown_link in megamenu_item.dropdown %}
-                    <li><a class="{% if dropdown_link.url == page.url %}active{% endif %} {% if dropdown_link.class %}{{ dropdown_link.class }}{% endif %}" href="{{ dropdown_link.url | prepend: site.baseurl }}">{{ dropdown_link.title }}</a>
+                    <li><a class="{% if dropdown_link.url == page.url %}active{% endif %} {% if dropdown_link.class %}{{ dropdown_link.class }}{% endif %}" href="{{ dropdown_link.url | prepend: site.baseurl }}">{{ dropdown_link.title }}</a></li>
                   {% endfor %}
                 </ul>
               </li>
@@ -20,7 +20,7 @@
         {% elsif link.dropdown %}
           <ul class="rd-navbar-dropdown">
             {% for dropdown_link in link.dropdown %}
-              <li><a class="{% if dropdown_link.url == page.url %}active{% endif %} {% if dropdown_link.class %}{{ dropdown_link.class }}{% endif %}" href="{{ dropdown_link.url | prepend: site.baseurl }}">{{ dropdown_link.title }}</a>
+              <li><a class="{% if dropdown_link.url == page.url %}active{% endif %} {% if dropdown_link.class %}{{ dropdown_link.class }}{% endif %}" href="{{ dropdown_link.url | prepend: site.baseurl }}">{{ dropdown_link.title }}</a></li>
             {% endfor %}
           </ul>
         {% endif %}
