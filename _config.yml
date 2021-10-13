@@ -75,7 +75,7 @@ defaults:
     values:
       show_meta: true   # Show metadata for all posts
       sidebar: none
-      comments: true
+      comments: false
       reCaptcha: true
       author: Steve     # Default author for posts
   -
