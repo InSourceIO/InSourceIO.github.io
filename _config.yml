@@ -109,7 +109,7 @@ msapplication_tileimage:                'msapplication_tileimage.png'           
 msapplication_tilecolor:                '#fabb00'
 
 # Google Analytics
-google_analytics_tracking_id: UA-77117959-1
+google_analytics_tracking_id: G-4Y11QQN5RS
 
 # reCaptcha
 reCaptcha:
